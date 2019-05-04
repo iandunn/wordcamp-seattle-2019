@@ -1,0 +1,17 @@
+/*
+ * Variables
+ */
+
+$color__foo: #abc;
+
+
+/*
+ * Mixins
+ */
+@mixin breakpoint-grid-layout() {
+	@supports ( display: grid ) {
+		@media screen and ( min-width: 700px ) {
+			@content;
+		}
+	}
+}
