@@ -311,10 +311,28 @@ template {
   display: none; }
 
 /*
- * Header
+ * Overall site layout
  */
 @supports (display: grid) {
   @media screen and (min-width: 700px) {
+    .site {
+      max-width: 900px;
+      margin: 0 auto; } } }
+
+/*
+ * Header
+ */
+.site-header {
+  background-color: #e6e7e9;
+  text-align: center; }
+
+.menu-toggle {
+  width: 100%; }
+
+@supports (display: grid) {
+  @media screen and (min-width: 700px) {
+    .site-header {
+      text-align: left; }
     #header-widget-1 {
       width: 100%;
       display: grid;
@@ -331,8 +349,16 @@ template {
       grid-area: tickets; } } }
 
 /*
+ * Content that applies to all posts/pages
+ */
+.site-content {
+  background-color: orange; }
+
+/*
  * Front page
  */
 /*
  * Footer
  */
+.site-footer {
+  background-color: yellow; }

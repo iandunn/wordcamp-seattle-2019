@@ -1,6 +1,5 @@
 // look into postcss, might be nice to use
 
-
 @import "abstracts";
 
 /*
@@ -9,9 +8,19 @@
 @import "normalize";
 
 /*
+ * Overall site layout
+ */
+@import "site";
+
+/*
  * Header
  */
 @import "header";
+
+/*
+ * Content that applies to all posts/pages
+ */
+@import "content";
 
 /*
  * Front page

@@ -1,7 +1,25 @@
 // start with simple design for mobile and old browsers
 // then use grid for bigger screens & modern browsers
 
+.site-header {
+	background-color: #e6e7e9;
+	text-align: center;
+}
+
+.menu-toggle {
+	width: 100%;
+}
+
+#media_image-2 {
+
+}
+
+
 @include breakpoint-grid-layout {
+	.site-header {
+		text-align: left;
+	}
+
 	#header-widget-1 {
 		width: 100%;
 		display: grid;
