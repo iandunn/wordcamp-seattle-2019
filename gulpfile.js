@@ -27,11 +27,18 @@ function lint() {
 		} ) )
 }
 
+function html() {
+    // todo make reload for php changes too
+	return gulp.src( './template-parts/**/*.html' )
+		.pipe( livereload() );
+}
+
 function watch() {
 	livereload.listen();
 	gulp.watch( 'sass/**/*.scss', gulp.series( css ) ); // todo add lint back and fix it from breaking the watch
+	gulp.watch( 'template-parts/**/*.html', gulp.series( html ) );
 }
 
 exports.css     = css;
 exports.lint    = lint;
-exports.default = gulp.series( css, watch );    // todo add lint back and fix it from breaking the watch
+exports.default = gulp.series( css, html, watch );    // todo add lint back and fix it from breaking the watch
