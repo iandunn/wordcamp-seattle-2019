@@ -2,15 +2,38 @@
  * Variables
  */
 
-$color__foo: #abc;
+/* COLORS */
+
+/* Primary */
+$red: #ec5723;
+$purple: #514b69;
+$mint: #f1faee;
+$aqua: #a8dadc;
+$blue: #457b9d;
+$white: #fff;
+$black: #000;
+
+/* Sub */
+$yellow: #eac435;
+$pink-light: #fcf7f8;
+$purple-light: #ced3dc;
+$purple-medium: #aba9c3;
+$blue-dark: #1c3144;
+
+
+/* FONTS */
+// TODO this is just an estimation
+$font-size-h1: 4rem;
+$font-size-h2: 3.125rem;
+$font-size-h3: 2rem;
 
 
 /*
  * Mixins
  */
 @mixin breakpoint-grid-layout() {
-	@supports ( display: grid ) {
-		@media screen and ( min-width: 700px ) {
+	@supports (display: grid) {
+		@media screen and (min-width: 700px) {
 			@content;
 		}
 	}

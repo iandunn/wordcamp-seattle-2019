@@ -1,0 +1,161 @@
+.info-column {
+	padding: 1rem;
+
+	a {
+		font-weight: bold;
+		display: block;
+		color: $black;
+		text-decoration: none;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			height: 0;
+			width: 0;
+			border-style: solid;
+			border-width: 5px 0 5px 8px;
+			border-color: transparent transparent transparent $red;
+			margin-right: 8px;
+		}
+	}
+
+	p {
+		margin: 0;
+	}
+}
+
+.info-header {
+	margin-bottom: 0.5rem;
+
+	&:after {
+		content: '';
+		height: 5px;
+		width: 60px;
+		margin-top: 5px;
+		background-color: $white;
+		display: block;
+	}
+}
+
+.info-linklist {
+	list-style: none;
+	margin: 0;
+	margin-top: 0.5rem;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -5px;
+	margin-right: -5px;
+
+	li {
+		flex-basis: 50%;
+
+		&.list-item-wide {
+			flex-basis: 100%;
+		}
+
+		a {
+			display: block;
+			padding: 10px;
+			background-color: lighten($yellow, 10%);
+			margin: 5px;
+
+			&:hover {
+				background-color: darken($yellow, 10%);
+			}
+		}
+	}
+}
+
+.info-column--attendees {
+	background-color: $yellow;
+
+	.info-header {
+		color: darken($yellow, 20%);
+	}
+}
+
+.info-column--sponsors {
+	background-color: $purple;
+	color: $white;
+
+	.info-header {
+		color: lighten($purple, 40%);
+	}
+
+	a {
+		color: $white;
+	}
+
+	.info-linklist {
+		a {
+			background-color: darken($purple, 8%);
+
+			&:hover {
+				background-color: darken($purple, 30%);
+			}
+		}
+	}
+}
+
+.info-column--speakers {
+	background-color: $aqua;
+
+	.info-header {
+		color: darken($aqua, 40%);
+	}
+
+	.info-linklist {
+		a {
+			background-color: lighten($aqua, 10%);
+
+			&:hover {
+				background-color: darken($aqua, 20%);
+			}
+		}
+	}
+}
+
+.info-column--volunteers {
+	background-color: $blue-dark;
+	color: $white;
+
+	.info-header {
+		color: $blue;
+	}
+
+	a {
+		color: $white;
+	}
+
+	.info-linklist {
+		a {
+			background-color: lighten($blue-dark, 8%);
+
+			&:hover {
+				background-color: darken($blue-dark, 30%);
+			}
+		}
+	}
+}
+
+
+@media (min-width: 600px) {
+	.info-column.wp-block-column {
+		flex-basis: calc(50% - 8px);
+	}
+
+	.info-column.wp-block-column:nth-child(2n) {
+		margin-left: 16px;
+	}
+}
+
+@media (min-width: 782px) {
+	.info-column.wp-block-column:not(:first-child) {
+		margin-left: 16px;
+	}
+
+	.info-column {
+		padding: 1rem 2rem;
+	}
+}

@@ -1,6 +1,10 @@
 /*
  * Variables
  */
+/* COLORS */
+/* Primary */
+/* Sub */
+/* FONTS */
 /*
  * Mixins
  */
@@ -311,6 +315,31 @@ template {
   display: none; }
 
 /*
+ * Global styles
+ */
+a {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 1rem;
+  line-height: 1.2; }
+
+h1 {
+  font-size: 4rem; }
+
+h2 {
+  font-size: 3.125rem; }
+
+h3 {
+  font-size: 2rem; }
+
+/*
  * Overall site layout
  */
 @supports (display: grid) {
@@ -351,12 +380,115 @@ template {
 /*
  * Content that applies to all posts/pages
  */
-.site-content {
-  background-color: orange; }
-
 /*
  * Front page
  */
+.info-column {
+  padding: 1rem; }
+  .info-column a {
+    font-weight: bold;
+    display: block;
+    color: #000;
+    text-decoration: none; }
+    .info-column a:before {
+      content: '';
+      display: inline-block;
+      height: 0;
+      width: 0;
+      border-style: solid;
+      border-width: 5px 0 5px 8px;
+      border-color: transparent transparent transparent #ec5723;
+      margin-right: 8px; }
+  .info-column p {
+    margin: 0; }
+
+.info-header {
+  margin-bottom: 0.5rem; }
+  .info-header:after {
+    content: '';
+    height: 5px;
+    width: 60px;
+    margin-top: 5px;
+    background-color: #fff;
+    display: block; }
+
+.info-linklist {
+  list-style: none;
+  margin: 0;
+  margin-top: 0.5rem;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -5px;
+  margin-right: -5px; }
+  .info-linklist li {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%; }
+    .info-linklist li.list-item-wide {
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%; }
+    .info-linklist li a {
+      display: block;
+      padding: 10px;
+      background-color: #efd163;
+      margin: 5px; }
+      .info-linklist li a:hover {
+        background-color: #d6ae16; }
+
+.info-column--attendees {
+  background-color: #eac435; }
+  .info-column--attendees .info-header {
+    color: #a88811; }
+
+.info-column--sponsors {
+  background-color: #514b69;
+  color: #fff; }
+  .info-column--sponsors .info-header {
+    color: #bab6cb; }
+  .info-column--sponsors a {
+    color: #fff; }
+  .info-column--sponsors .info-linklist a {
+    background-color: #3f3a51; }
+    .info-column--sponsors .info-linklist a:hover {
+      background-color: #0c0b10; }
+
+.info-column--speakers {
+  background-color: #a8dadc; }
+  .info-column--speakers .info-header {
+    color: #358083; }
+  .info-column--speakers .info-linklist a {
+    background-color: #cce9eb; }
+    .info-column--speakers .info-linklist a:hover {
+      background-color: #5fbbbf; }
+
+.info-column--volunteers {
+  background-color: #1c3144;
+  color: #fff; }
+  .info-column--volunteers .info-header {
+    color: #457b9d; }
+  .info-column--volunteers a {
+    color: #fff; }
+  .info-column--volunteers .info-linklist a {
+    background-color: #284661; }
+    .info-column--volunteers .info-linklist a:hover {
+      background-color: black; }
+
+@media (min-width: 600px) {
+  .info-column.wp-block-column {
+    -ms-flex-preferred-size: calc(50% - 8px);
+        flex-basis: calc(50% - 8px); }
+  .info-column.wp-block-column:nth-child(2n) {
+    margin-left: 16px; } }
+
+@media (min-width: 782px) {
+  .info-column.wp-block-column:not(:first-child) {
+    margin-left: 16px; }
+  .info-column {
+    padding: 1rem 2rem; } }
+
 /*
  * Footer
  */
