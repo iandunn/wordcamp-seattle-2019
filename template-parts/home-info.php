@@ -3,12 +3,12 @@
 	<div class="wp-block-column info-column info-column--attendees">
 		<h3 class="info-header">Attendees</h3>
 		<p>All you need to get started!</p>
-		<p><a href="/first-wordcamp-attendee">Is this your first WordCamp?</a></p>
+		<p><a href="?page=first-wordcamp-attendee">Is this your first WordCamp?</a></p>
 		<ul class="info-linklist">
-			<li><a href="http://tickets">Get Tickets</a></li>
-			<li><a href="/badges">Badges</a></li>
-			<li><a href="/attendees">Attendee List</a></li>
-			<li><a href="http://attendees-past">Past Attendees</a></li>
+			<li><a href="?page=tickets">Get Tickets</a></li>
+			<li><a href="?page=badges">Badges</a></li>
+			<li><a href="?page=attendees">Attendee List</a></li>
+			<li><a href="?page=attendees-past">Past Attendees</a></li>
 		</ul>
 	</div>
 	<div class="wp-block-column info-column info-column--sponsors">
