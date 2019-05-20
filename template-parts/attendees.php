@@ -1,9 +1,9 @@
 <article id="post-2" class="post-2 page type-page status-publish hentry">
 	<header class="entry-header">
-		<h1 class="entry-title">Sample Page</h1></header>
+		<h1 class="entry-title">Attendees</h1>
+	</header>
 
 	<div class="entry-content">
-
 		<p>This is an example page. It&#8217;s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:</p>
 
 

@@ -164,63 +164,19 @@ $content_template = $_GET['page'] ?? 'front-page';
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"> Skip to content </a>
 
-	<?php require_once( __DIR__ . '/template-parts/header.html' ); ?>
+	<?php require_once( __DIR__ . '/template-parts/header.php' ); ?>
 
 	<div id="content" class="site-content">
-
-		<div id="content-widgets">
-
-			<div id="content-widget-1" class="content-widgets-block">
-				<section id="recent-posts-4" class="widget widget_recent_entries">
-					<h2 class="widget-title">latest schedule updates</h2>
-					<ul>
-						<li>
-							<a href="https://2019.seattle.wordcamp.org/2019/05/03/welcome-to-wordcamp-seattle-2019/">Welcome to WordCamp Seattle 2019</a>
-						</li>
-					</ul>
-				</section>
-				<section id="custom_html-6" class="widget_text widget widget_custom_html">
-					<div class="textwidget custom-html-widget">
-						<button>
-							schedule
-						</button>
-					</div>
-				</section>
-				<section id="custom_html-7" class="widget_text widget widget_custom_html">
-					<div class="textwidget custom-html-widget"><a href="#">community sponsors</a></div>
-				</section>
-				<section id="nav_menu-3" class="widget widget_nav_menu">
-					<div class="menu-attendee-info-container">
-						<ul id="menu-attendee-info" class="menu">
-							<li id="menu-item-113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-113">
-								<a href="https://2019.seattle.wordcamp.org/code-of-conduct/">Code of Conduct</a>
-							</li>
-							<li id="menu-item-114" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-114">
-								<a href="https://2019.seattle.wordcamp.org/social-media-stream/">Social Media Stream</a>
-							</li>
-							<li id="menu-item-115" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-115">
-								<a href="https://2019.seattle.wordcamp.org/location/">Location</a></li>
-							<li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-116">
-								<a href="https://2019.seattle.wordcamp.org/" aria-current="page">Sample Page</a>
-							</li>
-						</ul>
-					</div>
-				</section>
-			</div>
-
-		</div>
-
-
-		<div id="primary" class="content-area">
-			<main id="main" class="site-main" role="main">
-				<?php require_once( __DIR__ . '/template-parts/' . htmlspecialchars( $content_template ) .'.html' ); ?>
-			</main>
-		</div>
-
-
+		<?php require_once(
+			sprintf(
+				'%s/template-parts/%s.php',
+				__DIR__,
+				htmlspecialchars( $content_template )
+			)
+		); ?>
 	</div> <!-- #content -->
 
-	<?php require_once( __DIR__ . '/template-parts/footer.html' ); ?>
+	<?php require_once( __DIR__ . '/template-parts/footer.php' ); ?>
 
 </div> <!-- #page -->
 
@@ -229,6 +185,7 @@ $content_template = $_GET['page'] ?? 'front-page';
 	var campsiteScreenReaderText = { 'quote': '<svg class="icon icon-quote-right" aria-hidden="true" role="img"> <use href="#icon-quote-right" xlink:href="#icon-quote-right"><\/use> <\/svg>' };
 	/* ]]> */
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type='text/javascript' src='https://2019.seattle.wordcamp.org/wp-content/themes/campsite-2017/js/skip-link-focus-fix.js?ver=1'></script>
 <script type='text/javascript' src='https://2019.seattle.wordcamp.org/wp-content/themes/campsite-2017/js/global.js?ver=1'></script>
 <script type='text/javascript' src='https://2019.seattle.wordcamp.org/wp-content/themes/campsite-2017/js/navigation.js?ver=1'></script>
