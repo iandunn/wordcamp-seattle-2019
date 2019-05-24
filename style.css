@@ -9,6 +9,11 @@
  * Mixins
  */
 /*
+ * This mimic's Core's `.alignfull` class.
+ *
+ * You should use that if you can apply it directly to the element, but this is useful when that's not possible.
+ */
+/*
  * Normalize browser inconsistencies
  */
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -345,9 +350,22 @@ h3 {
 /*
  * Header
  */
+.main-navigation {
+  position: relative;
+  top: 75px;
+  /* need to add more breakpoints?
+	should be able to have absolutely positied image have auto height, but would still need to push menu down a fixed amount
+	could just have extra space between menu and this though
+	 */ }
+  @supports (display: grid) {
+    @media screen and (min-width: 700px) {
+      .main-navigation {
+        top: 25px; } } }
+
 .site-header {
   padding-top: 20px;
   background-color: #a9dada;
+  /* todo convert to var, along w/ any others. see issue #9 for naming convention. */
   background-image: url("./images/v2-hero-mountain.png");
   /* todo the image needs to blend into the green background, otherwise cuts off abruptly on wide screens */
   background-size: contain;
@@ -365,8 +383,49 @@ h3 {
   background-repeat: no-repeat;
   background-position: bottom left 15%; }
 
+/* Yellow info banner */
+#custom_html-8 {
+  position: relative;
+  left: -1rem;
+  width: calc(100% + (2 * 1rem));
+  max-width: calc(100% + (2 * 1rem));
+  clear: both;
+  position: absolute;
+  top: 0;
+  margin: 0;
+  height: 75px;
+  /* need to add more breakpoints?
+	should be able to have absolutely positied image have auto height, but would still need to push menu down a fixed amount
+	could just have extra space between menu and this though
+	 */
+  background-color: #e9c544;
+  text-align: center; }
+  @media only screen and (min-width: 700px) {
+    #custom_html-8 {
+      margin-top: calc(2 * 1rem);
+      margin-bottom: calc(2 * 1rem);
+      left: calc(-12.5% - 75px);
+      width: calc(125% + 150px);
+      max-width: calc(125% + 150px); } }
+  @supports (display: grid) {
+    @media screen and (min-width: 700px) {
+      #custom_html-8 {
+        height: 25px; } } }
+  @supports (display: grid) {
+    @media screen and (min-width: 700px) {
+      #custom_html-8 {
+        margin: 0; } } }
+
 .menu-toggle {
   width: 100%; }
+
+/* todo abstract button styles since many are shared across header/front-page/footer */
+.widget_blog_subscription {
+  display: inline-block;
+  width: 225px;
+  background-color: #f3fbf0;
+  padding: 0 20px;
+  text-align: center; }
 
 @media screen and (min-width: 37.5em) {
   .page-navigation-container ul {

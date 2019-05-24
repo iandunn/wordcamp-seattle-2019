@@ -1,9 +1,29 @@
 // start with simple design for mobile and old browsers
 // then use grid for bigger screens & modern browsers
 
+@mixin critical_info_banner_height( $property ) {
+	#{$property}: 75px;
+
+	@include breakpoint-grid-layout {
+		#{$property}: 25px;
+	}
+
+	/* need to add more breakpoints?
+	should be able to have absolutely positied image have auto height, but would still need to push menu down a fixed amount
+	could just have extra space between menu and this though
+	 */
+}
+
+
+
+.main-navigation {
+	position: relative;
+	@include critical-info-banner-height( 'top' );
+}
+
 .site-header {
 	padding-top: 20px;
-	background-color: #a9dada;
+	background-color: #a9dada;	/* todo convert to var, along w/ any others. see issue #9 for naming convention. */
 	background-image: url( './images/v2-hero-mountain.png' ); /* todo the image needs to blend into the green background, otherwise cuts off abruptly on wide screens */
 	background-size: contain;	/* todo this needs work */
 	background-repeat: no-repeat;
@@ -20,12 +40,38 @@
 	background-position: bottom left 15%;
 }
 
+/* Yellow info banner */
+#custom_html-8 {
+	@include alignfull();
+
+	position: absolute;
+	top: 0;
+	margin: 0;
+	@include critical-info-banner-height( 'height' );
+	background-color: #e9c544;
+	text-align: center;
+
+	@include breakpoint-grid-layout {
+		margin: 0;
+	}
+}
+
 .menu-toggle {
 	width: 100%;
 }
 
 #media_image-2 {
 
+}
+
+/* todo abstract button styles since many are shared across header/front-page/footer */
+
+.widget_blog_subscription {
+	display: inline-block;
+	width: 225px;
+	background-color: #f3fbf0;
+	padding: 0 20px;
+	text-align: center;
 }
 
 @media screen and (min-width: 37.5em) {

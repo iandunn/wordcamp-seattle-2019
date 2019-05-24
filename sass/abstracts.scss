@@ -38,3 +38,24 @@ $font-size-h3: 2rem;
 		}
 	}
 }
+
+/*
+ * This mimic's Core's `.alignfull` class.
+ *
+ * You should use that if you can apply it directly to the element, but this is useful when that's not possible.
+ */
+@mixin alignfull() {
+	position: relative;
+	left: -1rem;
+	width: calc(100% + (2 * 1rem));
+	max-width: calc(100% + (2 * 1rem));
+	clear: both;
+
+	@media only screen and (min-width: 700px) {
+		margin-top: calc(2 * 1rem);
+		margin-bottom: calc(2 * 1rem);
+		left: calc(-12.5% - 75px);
+		width: calc(125% + 150px);
+		max-width: calc(125% + 150px);
+	}
+}

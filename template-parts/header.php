@@ -45,8 +45,8 @@
 				<div class="textwidget custom-html-widget">WordCamp Seattle
 					&#8226;
 					Nov. 12-13, 2019
-					&amp;bullet; <a href="/location">Washington State Convention Center</a>
-					&amp;bullet; <a href="">#WCSEA</a></div>
+					&#8226; <a href="/location">Washington State Convention Center</a>
+					&#8226; <a href="">#WCSEA</a></div>
 			</section>
 			<section id="custom_html-3" class="widget_text widget widget_custom_html">
 				<div class="textwidget custom-html-widget">
