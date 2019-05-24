@@ -36,11 +36,14 @@ This is a static version of the [WordCamp Seattle 2019](https://2019.seattle.wor
 
 When you're ready to launch:
 
+1. Turn on Coming Soon mode, so visitors don't see the site in transition
+1. Switch to the CampSite 2017 theme
 1. Configure Remote CSS to point to the built `style.css` file in the GitHub repo
 1. Create nav menus, widgets, etc to match what's in the static HTML files
 1. use the Additional CSS panel in the Custmoizers to quickly/easily make any tweaks that are needed
 1. Setup the webhook so that pushing changes to the Git repo automatically deploy them to the production site (see Remote CSS on-screen help).
 1. Move the Additional CSS tweaks to the Git repo so that everything is in one place and consistent.
+1. Turn off Coming Soon mode
 
 ### TODO
 

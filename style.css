@@ -342,19 +342,28 @@ h3 {
 /*
  * Overall site layout
  */
-@supports (display: grid) {
-  @media screen and (min-width: 700px) {
-    .site {
-      max-width: 900px;
-      margin: 0 auto; } } }
-
 /*
  * Header
  */
 .site-header {
   padding-top: 20px;
-  background-color: #e6e7e9;
+  background-color: #a9dada;
+  background-image: url("./images/v2-hero-mountain.png");
+  /* todo the image needs to blend into the green background, otherwise cuts off abruptly on wide screens */
+  background-size: contain;
+  /* todo this needs work */
+  background-repeat: no-repeat;
+  background-position: bottom;
   text-align: center; }
+
+#header-widgets {
+  max-width: 900px;
+  margin: 0 auto;
+  background-image: url("./images/v2-tent.png");
+  background-size: 50%;
+  /* todo this needs work */
+  background-repeat: no-repeat;
+  background-position: bottom left 15%; }
 
 .menu-toggle {
   width: 100%; }
@@ -404,12 +413,12 @@ h3 {
 .info-column {
   padding: 1rem; }
   .info-column a {
-    font-weight: bold;
+    font-weight: 500;
     display: block;
     color: #000;
     text-decoration: none; }
-    .info-column a:before {
-      content: '';
+    .info-column a::before {
+      content: "";
       display: inline-block;
       height: 0;
       width: 0;
@@ -422,8 +431,8 @@ h3 {
 
 .info-header {
   margin-bottom: 0.5rem; }
-  .info-header:after {
-    content: '';
+  .info-header::after {
+    content: "";
     height: 5px;
     width: 60px;
     margin-top: 5px;
@@ -511,4 +520,4 @@ h3 {
  * Footer
  */
 .site-footer {
-  background-color: yellow; }
+  background-color: #eac435; }

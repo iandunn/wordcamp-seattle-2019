@@ -3,8 +3,21 @@
 
 .site-header {
 	padding-top: 20px;
-	background-color: #e6e7e9;
+	background-color: #a9dada;
+	background-image: url( './images/v2-hero-mountain.png' ); /* todo the image needs to blend into the green background, otherwise cuts off abruptly on wide screens */
+	background-size: contain;	/* todo this needs work */
+	background-repeat: no-repeat;
+	background-position: bottom;
 	text-align: center;
+}
+
+#header-widgets {
+	max-width: 900px;
+	margin: 0 auto;
+	background-image: url( './images/v2-tent.png' );
+	background-size: 50%;	/* todo this needs work */
+	background-repeat: no-repeat;
+	background-position: bottom left 15%;
 }
 
 .menu-toggle {

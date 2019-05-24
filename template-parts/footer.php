@@ -3,6 +3,7 @@
 		<div id="footer-widgets">
 
 
+			<!-- todo move this to home page content, use Sponsors block instead of widgets -->
 			<div id="footer-widget-1" class="footer-widgets-block">
 				<section id="custom_html-5" class="widget_text widget widget_custom_html">
 					<h2 class="widget-title">Thank you sponsors</h2>
@@ -22,6 +23,9 @@
 				</section>
 			</div>
 
+			<!-- social media sites:
+			Facebook, Instagram, and Twitter
+			-->
 
 		</div>
 
