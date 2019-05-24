@@ -5,6 +5,12 @@ var stylelint    = require( 'gulp-stylelint' );
 var autoprefixer = require( 'autoprefixer' );
 var livereload   = require( 'gulp-livereload' );
 
+const phpFiles = [
+	'./index.php',
+	'./template-parts/**/*.php'
+];
+
+
 function css() {
 	var processors = [
 		autoprefixer( { browsers: ['last 2 versions'] } )
@@ -27,18 +33,16 @@ function lint() {
 		} ) )
 }
 
-function html() {
-    // todo make reload for php changes too
-	return gulp.src( './template-parts/**/*.html' )
-		.pipe( livereload() );
+function php() {
+	return gulp.src( phpFiles ).pipe( livereload() );
 }
 
 function watch() {
 	livereload.listen();
 	gulp.watch( 'sass/**/*.scss', gulp.series( css ) ); // todo add lint back and fix it from breaking the watch
-	gulp.watch( 'template-parts/**/*.html', gulp.series( html ) );
+	gulp.watch( phpFiles, gulp.series( php ) );
 }
 
 exports.css     = css;
 exports.lint    = lint;
-exports.default = gulp.series( css, html, watch );    // todo add lint back and fix it from breaking the watch
+exports.default = gulp.series( css, php, watch );    // todo add lint back and fix it from breaking the watch
