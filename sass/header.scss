@@ -8,10 +8,10 @@
 		#{$property}: 25px;
 	}
 
-	/* need to add more breakpoints?
+	/* todo need to add more breakpoints?
 	should be able to have absolutely positied image have auto height, but would still need to push menu down a fixed amount
 	could just have extra space between menu and this though
-	 */
+	*/
 }
 
 
@@ -25,6 +25,7 @@
 	padding-top: 20px;
 	background-color: #a9dada;	/* todo convert to var, along w/ any others. see issue #9 for naming convention. */
 	background-image: url( './images/v2-hero-mountain.png' ); /* todo the image needs to blend into the green background, otherwise cuts off abruptly on wide screens */
+	/* todo replace w/ svg -- https://drive.google.com/open?id=1WpNQXyTbpIUZAwTepKUmwavp4WbkeDOn */
 	background-size: contain;	/* todo this needs work */
 	background-repeat: no-repeat;
 	background-position: bottom;

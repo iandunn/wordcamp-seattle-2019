@@ -353,10 +353,10 @@ h3 {
 .main-navigation {
   position: relative;
   top: 75px;
-  /* need to add more breakpoints?
+  /* todo need to add more breakpoints?
 	should be able to have absolutely positied image have auto height, but would still need to push menu down a fixed amount
 	could just have extra space between menu and this though
-	 */ }
+	*/ }
   @supports (display: grid) {
     @media screen and (min-width: 700px) {
       .main-navigation {
@@ -368,6 +368,7 @@ h3 {
   /* todo convert to var, along w/ any others. see issue #9 for naming convention. */
   background-image: url("./images/v2-hero-mountain.png");
   /* todo the image needs to blend into the green background, otherwise cuts off abruptly on wide screens */
+  /* todo replace w/ svg -- https://drive.google.com/open?id=1WpNQXyTbpIUZAwTepKUmwavp4WbkeDOn */
   background-size: contain;
   /* todo this needs work */
   background-repeat: no-repeat;
@@ -394,10 +395,10 @@ h3 {
   top: 0;
   margin: 0;
   height: 75px;
-  /* need to add more breakpoints?
+  /* todo need to add more breakpoints?
 	should be able to have absolutely positied image have auto height, but would still need to push menu down a fixed amount
 	could just have extra space between menu and this though
-	 */
+	*/
   background-color: #e9c544;
   text-align: center; }
   @media only screen and (min-width: 700px) {
@@ -579,5 +580,49 @@ h3 {
  * Footer
  */
 .site-footer {
+  padding: 40px 10%;
   background-color: #1d3143;
-  /* todo fix according to whateever is decided in https://github.com/iandunn/wordcamp-seattle-2019/issues/9 */ }
+  /* todo fix according to whateever is decided in https://github.com/iandunn/wordcamp-seattle-2019/issues/9 */
+  color: #fcfcf8; }
+
+.site-footer h2 {
+  font-size: 1rem; }
+
+#footer-widgets {
+  position: relative;
+  /* todo horizontal scrolling for mobile */ }
+  #footer-widgets #footer-widget-4 {
+    position: absolute;
+    top: calc(-10% / 2);
+    /* todo works on desktop but not mobile */
+    right: 0; }
+  @supports (display: grid) {
+    @media screen and (min-width: 700px) {
+      #footer-widgets {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        #footer-widgets .footer-widgets-block {
+          margin-left: 20px;
+          -ms-flex-preferred-size: 33%;
+              flex-basis: 33%; }
+          #footer-widgets .footer-widgets-block:first-child {
+            margin-left: 0; } } }
+
+#nav_menu-4 ul {
+  margin-left: 0;
+  list-style: none; }
+  #nav_menu-4 ul:first-child {
+    padding-left: 0; }
+  #nav_menu-4 ul .sub-menu {
+    padding-left: 20px; }
+
+.widget_blog_subscription {
+  color: #454443; }
+  .widget_blog_subscription input {
+    border: 1px solid #454443;
+    padding: 6px 10px 3px 10px; }
+
+.site-info {
+  display: none;
+  /* This content is placed in a footer widget instead for styling purposes. */ }

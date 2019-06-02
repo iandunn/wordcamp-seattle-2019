@@ -1,4 +1,62 @@
-.site-footer {
+$footer-top-padding: 10%;
 
+.site-footer {
+	padding: 40px $footer-top-padding;
 	background-color: #1d3143;	/* todo fix according to whateever is decided in https://github.com/iandunn/wordcamp-seattle-2019/issues/9 */
+	color: #fcfcf8;
+}
+
+.site-footer h2 {
+	font-size: 1rem;
+}
+
+#footer-widgets {
+	position: relative;
+
+	/* todo horizontal scrolling for mobile */
+
+	#footer-widget-4 {
+		position: absolute;
+		top: calc(-#{$footer-top-padding} / 2);	/* todo works on desktop but not mobile */
+		right: 0;
+	}
+
+	@include breakpoint-grid-layout {
+		display: flex;
+
+		.footer-widgets-block {
+			margin-left: 20px;
+			flex-basis: 33%;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+#nav_menu-4 ul {
+	margin-left: 0;
+	list-style: none;
+
+	&:first-child {
+		padding-left: 0;
+	}
+
+	.sub-menu {
+		padding-left: 20px;
+	}
+}
+
+.widget_blog_subscription {
+	color: #454443;
+
+	input {
+		border: 1px solid #454443;
+		padding: 6px 10px 3px 10px;
+	}
+}
+
+.site-info {
+	display: none; /* This content is placed in a footer widget instead for styling purposes. */
 }

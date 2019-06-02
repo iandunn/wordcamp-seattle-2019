@@ -122,12 +122,25 @@
 				<section id="custom_html-11" class="widget_text widget widget_custom_html">
 					<div class="textwidget custom-html-widget">
 						<a href="https://www.google.com/maps/dir//The+Conference+Center+at+the+Washington+State+Convention+Center,+800+Pike+St+%23804,+Seattle,+WA+98101/">
-							<img src="images/footer-map.png" alt="todo" /> </a>
+							<img src="images/footer-map.png" alt="Map of downtown Seattle with a marker at the location of The Conference Center" /> </a>
+							<!-- todo resize image, way too big -->
 
 						<h4>
 							Nov. 12-13, 2019
 						</h4>
-						<a href="todo">Washington State Convention Center</a></div>
+						<a href="todo">Washington State Convention Center</a>
+
+						<img src="todo purple umbrella" alt="" />
+					</div>
+				</section>
+			</div>
+
+			<div id="footer-widget-4" class="footer-widgets-block">
+				<section id="custom_html-12" class="widget_text widget widget_custom_html">
+					<div class="textwidget custom-html-widget">
+						<a href="#top">
+							<img src="todo" alt="Jump to top of page" />
+						</a>
 				</section>
 			</div>
 
