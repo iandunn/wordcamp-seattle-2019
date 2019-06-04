@@ -471,6 +471,29 @@ h3 {
 .widget-title {
   text-align: center; }
 
+#content-widget-4 {
+  background-image: url(images/v2-rain.png);
+  background-repeat: repeat; }
+
+.widget_rss .widget-title {
+  display: none; }
+
+.widget_rss ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .widget_rss ul li {
+    border: 2px solid #d5ece9;
+    background-color: #fff;
+    padding: 2rem;
+    margin: 2rem 0; }
+    .widget_rss ul li a {
+      color: #000;
+      font-size: 24px;
+      text-decoration: none; }
+      .widget_rss ul li a:hover {
+        text-decoration: underline; }
+
 .info-column {
   padding: 1rem; }
   .info-column a {

@@ -22,6 +22,8 @@
 
 				<?php require_once( __DIR__ . '/home-info.php' ); ?>
 
+				<?php require_once( __DIR__ . '/home-posts.php' ); ?>
+
 				<section id="nav_menu-3" class="widget widget_nav_menu">
 					<div class="menu-attendee-info-container">
 						<ul id="menu-attendee-info" class="menu">

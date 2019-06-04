@@ -6,26 +6,23 @@
 		<h2 class="widget-title">Fuel Your Business</h2>
 		<div class="textwidget custom-html-widget"></div>
 	</section>
-	<!-- Jetpack display remote posts -->
-	<section class="widget jetpack_display_posts_widget-3 widget_jetpack_display_posts_widget">
-	<h3>Recent Posts: WordCamp Seattle 2019</h3>
-	<div class="jetpack-display-remote-posts">
-		<h4><a href="/just-testing/">Lorem ipsum dolor sit amet</a></h4>
-		<a title="Just testing" href="/just-testing/">
-			<img src="https://carkeekstudios.com/wp-content/uploads/2018/12/IMG_9682.jpg" alt="Just testing"/>
-		</a>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-		<h4><a href="/hello-world/">Duis aute irure dolor in reprehenderit</a></h4>
-		<a title="Just testing" href="/just-testing/">
-			<img src="https://carkeekstudios.com/wp-content/uploads/2018/12/IMG_9682.jpg" alt="Just testing"/>
-		</a>
-		<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<h4><a href="/hello-world/">Duis aute irure dolor in reprehenderit</a></h4>
-		<a title="Just testing" href="/just-testing/">
-			<img src="https://carkeekstudios.com/wp-content/uploads/2018/12/IMG_9682.jpg" alt="Just testing"/>
-		</a>
-		<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-	</div><!-- .jetpack-display-remote-posts -->
+	<!-- RSS WIDGET set to the proper category, 2 posts at a time, include content -->
+	<section id="rss-3" class="widget widget_rss">
+		<h2 class="widget-title">
+			<a class="rsswidget" href="http://wordcamp-sea-2019.local/blog/category/sponsored/feed/">
+				<img class="rss-widget-icon" style="border:0" width="14" height="14" src="http://wordcamp-sea-2019.local/wp-includes/images/rss.png" alt="RSS">
+			</a>
+			<a class="rsswidget" href="http://wordcamp-sea-2019.local/">Sponsored Posts</a>
+		</h2>
+		<ul>
+			<li>
+				<a class="rsswidget" href="http://wordcamp-sea-2019.local/blog/2019/06/04/another-sponsored-post/">Another Sponsored Post</a>
+				<div class="rssSummary">Pellentesque condimentum, sem faucibus blandit tincidunt, orci lorem sollicitudin ante, et sagittis libero urna sit amet eros. Pellentesque ut fringilla velit. Sed consectetur fermentum felis, at convallis dolor maximus nec. Quisque a vestibulum risus, in sollicitudin sem. Vivamus feugiat ac urna vel fringilla. Donec id lacus ut augue interdum ultrices ac id sem. Ut tristique […]</div>
+			</li>
+			<li>
+				<a class="rsswidget" href="http://wordcamp-sea-2019.local/blog/2019/06/04/post-placeholder-i-might-have-a-title-that-takes-up-a-lot-of-space/">Post Placeholder, I might have a title that takes up a lot of space.</a>
+				<div class="rssSummary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla urna risus, lacinia sit amet feugiat sit amet, pharetra non sapien. Nulla quis risus velit. Ut posuere ligula non mauris rhoncus, eget scelerisque eros fringilla. Donec orci purus, mollis congue scelerisque sit amet, pretium vitae nisi. Praesent laoreet leo sapien, eu congue ligula cursus sed. Fusce […]</div>
+			</li>
+		</ul>
 	</section>
 </div>

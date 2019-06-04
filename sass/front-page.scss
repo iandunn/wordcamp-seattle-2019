@@ -2,6 +2,41 @@
 	text-align: center;
 }
 
+//Fuel Your Business
+#content-widget-4 {
+	background-image: url(images/v2-rain.png);
+	background-repeat: repeat;
+}
+
+.widget_rss {
+	.widget-title {
+		display: none;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			border: 2px solid $color-border;
+			background-color: $white;
+			padding: 2rem;
+			margin: 2rem 0;
+
+			a {
+				color: $black;
+				font-size: 24px;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
 .info-column {
 	padding: 1rem;
 
