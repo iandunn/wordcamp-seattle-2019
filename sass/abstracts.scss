@@ -4,21 +4,46 @@
 
 /* COLORS */
 
-/* Primary */
-$red: #ec5723;
-$purple: #514b69;
-$mint: #f1faee;
-$aqua: #a8dadc;
-$blue: #457b9d;
 $white: #fff;
 $black: #000;
 
-/* Sub */
-$yellow: #eac435;
-$pink-light: #fcf7f8;
-$purple-light: #ced3dc;
-$purple-medium: #aba9c3;
-$blue-dark: #1c3144;
+$color-red-53: hsl(12, 88%, 53%);
+$color-red-62: hsl(15, 84%, 62%);
+
+$color-purple-30: hsl(250, 20%, 30%); //dark
+$color-purple-36: hsl(250, 17%, 36%);
+$color-purple-47: hsl(245, 10%, 47%); //medium
+$color-purple-79: hsl(245, 22%, 79%); //light
+
+$color-yellow-35: hsl(42, 89%, 35%);
+$color-yellow-56: hsl(47, 81%, 56%);
+$color-yellow-77: hsl(44, 73%, 77%);
+
+$color-blue-15: hsl(202, 61%, 15%);
+
+//Speakers
+$color-blue-64: hsl(185, 52%, 64%);
+$color-blue-19: hsl(208, 42%, 19%);
+$color-blue-81: hsl(180, 56%, 81%);
+
+//Volunteers
+$color-blue-44: hsl(203, 40%, 44%);
+$color-blue-62: hsl(194, 38%, 62%);
+
+$color-blue-76: hsl(181, 42%, 76%);
+$color-blue-88: hsl(172, 37%, 88%);
+
+$color-green-96: hsl(104, 58%, 96%);
+
+$color-gray-91: hsl(240, 4%, 91%);
+
+$color-button: $color-red-53;
+$color-button-light: $color-red-62;
+$color-border: $color-blue-88;
+$color-nav: $color-red-53;
+$color-hero-background: $color-blue-76;
+$color-hero-h1: $color-purple-36;
+$color-footer-background: $color-blue-19;
 
 
 /* FONTS */

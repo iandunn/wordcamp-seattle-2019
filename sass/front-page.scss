@@ -1,3 +1,7 @@
+.widget-title {
+	text-align: center;
+}
+
 .info-column {
 	padding: 1rem;
 
@@ -9,12 +13,13 @@
 
 		&::before {
 			content: "";
+			background-image: url(images/arrow-orange.png);
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-position: center center;
 			display: inline-block;
-			height: 0;
-			width: 0;
-			border-style: solid;
-			border-width: 5px 0 5px 8px;
-			border-color: transparent transparent transparent $red;
+			height: 15px;
+			width: 15px;
 			margin-right: 8px;
 		}
 	}
@@ -57,30 +62,30 @@
 		a {
 			display: block;
 			padding: 10px;
-			background-color: lighten($yellow, 10%);
+			background-color: $color-yellow-77;
 			margin: 5px;
 
 			&:hover {
-				background-color: darken($yellow, 10%);
+				background-color: darken($color-yellow-56, 10%);
 			}
 		}
 	}
 }
 
 .info-column--attendees {
-	background-color: $yellow;
+	background-color: $color-yellow-56;
 
 	.info-header {
-		color: darken($yellow, 20%);
+		color: $color-yellow-35;
 	}
 }
 
 .info-column--sponsors {
-	background-color: $purple;
+	background-color: $color-purple-47;
 	color: $white;
 
 	.info-header {
-		color: lighten($purple, 40%);
+		color: $color-purple-79;
 	}
 
 	a {
@@ -90,40 +95,40 @@
 	.info-linklist {
 
 		a {
-			background-color: darken($purple, 8%);
+			background-color: $color-purple-30;
 
 			&:hover {
-				background-color: darken($purple, 30%);
+				background-color: darken($color-purple-30, 10%);
 			}
 		}
 	}
 }
 
 .info-column--speakers {
-	background-color: $aqua;
+	background-color: $color-blue-64;
 
 	.info-header {
-		color: darken($aqua, 40%);
+		color: $color-blue-19;
 	}
 
 	.info-linklist {
 
 		a {
-			background-color: lighten($aqua, 10%);
+			background-color: $color-blue-81;
 
 			&:hover {
-				background-color: darken($aqua, 20%);
+				background-color: darken($color-blue-64, 15%);
 			}
 		}
 	}
 }
 
 .info-column--volunteers {
-	background-color: $blue-dark;
+	background-color: $color-blue-19;
 	color: $white;
 
 	.info-header {
-		color: $blue;
+		color: $color-blue-62;
 	}
 
 	a {
@@ -133,10 +138,10 @@
 	.info-linklist {
 
 		a {
-			background-color: lighten($blue-dark, 8%);
+			background-color: $color-blue-44;
 
 			&:hover {
-				background-color: darken($blue-dark, 30%);
+				background-color: darken($color-blue-44, 15%);
 			}
 		}
 	}

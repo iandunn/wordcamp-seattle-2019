@@ -2,8 +2,6 @@
  * Variables
  */
 /* COLORS */
-/* Primary */
-/* Sub */
 /* FONTS */
 /*
  * Mixins
@@ -470,6 +468,9 @@ h3 {
 /*
  * Front page
  */
+.widget-title {
+  text-align: center; }
+
 .info-column {
   padding: 1rem; }
   .info-column a {
@@ -479,12 +480,13 @@ h3 {
     text-decoration: none; }
     .info-column a::before {
       content: "";
+      background-image: url(images/arrow-orange.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
       display: inline-block;
-      height: 0;
-      width: 0;
-      border-style: solid;
-      border-width: 5px 0 5px 8px;
-      border-color: transparent transparent transparent #ec5723;
+      height: 15px;
+      width: 15px;
       margin-right: 8px; }
   .info-column p {
     margin: 0; }
@@ -520,48 +522,48 @@ h3 {
     .info-linklist li a {
       display: block;
       padding: 10px;
-      background-color: #efd163;
+      background-color: #efd89a;
       margin: 5px; }
       .info-linklist li a:hover {
-        background-color: #d6ae16; }
+        background-color: #d4ab16; }
 
 .info-column--attendees {
-  background-color: #eac435; }
+  background-color: #eac234; }
   .info-column--attendees .info-header {
-    color: #a88811; }
+    color: #a9790a; }
 
 .info-column--sponsors {
-  background-color: #514b69;
+  background-color: #6e6c84;
   color: #fff; }
   .info-column--sponsors .info-header {
-    color: #bab6cb; }
+    color: #c0bed5; }
   .info-column--sponsors a {
     color: #fff; }
   .info-column--sponsors .info-linklist a {
-    background-color: #3f3a51; }
+    background-color: #423d5c; }
     .info-column--sponsors .info-linklist a:hover {
-      background-color: #0c0b10; }
+      background-color: #2c293d; }
 
 .info-column--speakers {
-  background-color: #a8dadc; }
+  background-color: #73cbd3; }
   .info-column--speakers .info-header {
-    color: #358083; }
+    color: #1c3245; }
   .info-column--speakers .info-linklist a {
-    background-color: #cce9eb; }
+    background-color: #b3eaea; }
     .info-column--speakers .info-linklist a:hover {
-      background-color: #5fbbbf; }
+      background-color: #3cb3be; }
 
 .info-column--volunteers {
-  background-color: #1c3144;
+  background-color: #1c3245;
   color: #fff; }
   .info-column--volunteers .info-header {
-    color: #457b9d; }
+    color: #79b2c3; }
   .info-column--volunteers a {
     color: #fff; }
   .info-column--volunteers .info-linklist a {
-    background-color: #284661; }
+    background-color: #437b9d; }
     .info-column--volunteers .info-linklist a:hover {
-      background-color: black; }
+      background-color: #2c5168; }
 
 @media (min-width: 600px) {
   .info-column.wp-block-column {
