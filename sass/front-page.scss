@@ -41,22 +41,9 @@
 	padding: 1rem;
 
 	a {
-		font-weight: 500;
 		display: block;
 		color: $black;
 		text-decoration: none;
-
-		&::before {
-			content: "";
-			background-image: url(images/arrow-orange.png);
-			background-size: 100%;
-			background-repeat: no-repeat;
-			background-position: center center;
-			display: inline-block;
-			height: 15px;
-			width: 15px;
-			margin-right: 8px;
-		}
 	}
 
 	p {
@@ -98,6 +85,7 @@
 			display: block;
 			padding: 10px;
 			background-color: $color-yellow-77;
+			border: 1px solid $color-yellow-61;
 			margin: 5px;
 
 			&:hover {
@@ -131,6 +119,7 @@
 
 		a {
 			background-color: $color-purple-30;
+			border: 1px solid $color-purple-27;
 
 			&:hover {
 				background-color: darken($color-purple-30, 10%);
@@ -150,6 +139,7 @@
 
 		a {
 			background-color: $color-blue-81;
+			border: 1px solid $color-blue-53;
 
 			&:hover {
 				background-color: darken($color-blue-64, 15%);
@@ -174,6 +164,7 @@
 
 		a {
 			background-color: $color-blue-44;
+			border: 1px solid $color-blue-13;
 
 			&:hover {
 				background-color: darken($color-blue-44, 15%);

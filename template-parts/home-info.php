@@ -10,23 +10,23 @@
 				<div class="wp-block-column info-column info-column--attendees">
 					<h3 class="info-header">Attendees</h3>
 					<p>All you need to get started!</p>
-					<p><a href="?page=first-wordcamp-attendee">Is this your first WordCamp?</a></p>
+					<p><a href="?page=first-wordcamp-attendee" class="arrow">Is this your first WordCamp?</a></p>
 					<ul class="info-linklist">
-						<li><a href="?page=tickets">Get Tickets</a></li>
-						<li><a href="?page=badges">Badges</a></li>
-						<li><a href="?page=attendees">Attendee List</a></li>
-						<li><a href="?page=attendees-past">Past Attendees</a></li>
+						<li><a href="?page=tickets" class="button arrow">Get Tickets</a></li>
+						<li><a href="?page=badges" class="button arrow">Badges</a></li>
+						<li><a href="?page=attendees" class="button arrow">Attendee List</a></li>
+						<li><a href="?page=attendees-past" class="button arrow">Past Attendees</a></li>
 					</ul>
 				</div>
 				<div class="wp-block-column info-column info-column--sponsors">
 					<h3 class="info-header">Sponsors</h3>
 					<p>Your support makes this possible</p>
-					<p><a href="/first-wordcamp-attendee">Is this your first WordCamp?</a></p>
+					<p><a href="/first-wordcamp-attendee" class="arrow">Is this your first WordCamp?</a></p>
 					<ul class="info-linklist">
-						<li><a href="http://tickets">Get Tickets</a></li>
-						<li><a href="/badges">Badges</a></li>
-						<li><a href="/attendees">Attendee List</a></li>
-						<li><a href="http://attendees-past">Past Attendees</a></li>
+						<li><a href="http://tickets" class="button arrow">Get Tickets</a></li>
+						<li><a href="/badges" class="button arrow">Badges</a></li>
+						<li><a href="/attendees" class="button arrow">Attendee List</a></li>
+						<li><a href="http://attendees-past" class="button arrow">Past Attendees</a></li>
 					</ul>
 				</div>
 			</div>
@@ -35,19 +35,19 @@
 					<h3 class="info-header">Speakers</h3>
 					<p>Share your expertise as a user, developer, designer, business. Apply to speak.</p>
 					<ul class="info-linklist">
-						<li><a href="http://tickets">Apply to Speak</a></li>
-						<li><a href="/badges">Badges</a></li>
-						<li><a href="/attendees">Speakers List</a></li>
-						<li><a href="http://attendees-past">Topics</a></li>
+						<li><a href="http://tickets" class="button arrow">Apply to Speak</a></li>
+						<li><a href="/badges" class="button arrow">Badges</a></li>
+						<li><a href="/attendees" class="button arrow">Speakers List</a></li>
+						<li><a href="http://attendees-past" class="button arrow">Topics</a></li>
 					</ul>
 				</div>
 				<div class="wp-block-column info-column info-column--volunteers">
 					<h3 class="info-header">Volunteers &amp; Organizers</h3>
 					<p>We need your help! This is the best way to meet people, especially if you're shy.</p>
 					<ul class="info-linklist">
-						<li class="list-item-wide"><a href="http://tickets">Become a Volunteer</a></li>
-						<li><a href="/attendees">Organizers</a></li>
-						<li><a href="http://attendees-past">Badges</a></li>
+						<li class="list-item-wide"><a href="http://tickets" class="button arrow">Become a Volunteer</a></li>
+						<li><a href="/attendees" class="button arrow">Organizers</a></li>
+						<li><a href="http://attendees-past" class="button arrow">Badges</a></li>
 					</ul>
 				</div>
 			</div>

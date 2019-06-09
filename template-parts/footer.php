@@ -109,9 +109,9 @@
 
 				<section id="custom_html-10" class="widget_text widget widget_custom_html">
 					<div class="textwidget custom-html-widget">
-						<a href="/tickets" class="button-link">Grab Tickets Now!</a>
+						<a href="/tickets" class="button arrow">Grab Tickets Now!</a>
 
-						<a class="site-info-network button-link" href="https://central.wordcamp.org/">Go to WordCamp Central</a>
+						<a class="site-info-network button arrow" href="https://central.wordcamp.org/">Go to WordCamp Central</a>
 
 						<a class="site-info-generator" href="https://wordpress.org/" title="A Semantic Personal Publishing Platform" rel="generator"> Proudly powered by WordPress </a>
 					</div>
