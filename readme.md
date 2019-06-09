@@ -12,7 +12,7 @@ This is a static version of the [WordCamp Seattle 2019](https://2019.seattle.wor
 #### Development workflow
 
 1. `git pull`
-1. `npm run watch`: Run the linter and build the CSS file, watching scss files for changes. Also turns on the livereload server.
+1. `npm start`: Run the linter and build the CSS file, watching scss files for changes. Also turns on the livereload server.
 1. Load the `index.php` file in your browser, with a `page` param that matches the content template. e.g., `index.php?page=front-page`.
 1. Edit the SCSS files to match the mockup.
 1. `npm run lint` and fix any violations.

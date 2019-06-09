@@ -9,8 +9,9 @@
 		"url": "https://github.com/iandunn/wordcamp-seattle-2019.git"
 	},
 	"scripts": {
-		"build": "gulp lint && gulp css",
+		"start": "gulp",
 		"watch": "gulp",
+		"build": "gulp lint && gulp css",
 		"lint": "stylelint sass"
 	},
 	"devDependencies": {
