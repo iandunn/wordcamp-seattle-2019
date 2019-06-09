@@ -1,9 +1,23 @@
-$footer-top-padding: 10%;
+$footer-left-padding: 10%;
+$footer-top-padding: 20px;
 
 .site-footer {
-	padding: 40px $footer-top-padding;
+	padding: $footer-top-padding $footer-left-padding 70px $footer-left-padding;
 	background-color: #1d3143;	/* todo fix according to whateever is decided in https://github.com/iandunn/wordcamp-seattle-2019/issues/9 */
 	color: #fcfcf8;
+
+	a {
+		color: $white;
+		text-decoration: none;
+	}
+
+	a.button {
+		color: $white;
+
+		&::before {
+			background-image: url(images/arrow-white.png);
+		}
+	}
 }
 
 .site-footer h2 {
@@ -13,16 +27,9 @@ $footer-top-padding: 10%;
 #footer-widgets {
 	position: relative;
 
-	/* todo horizontal scrolling for mobile */
-
-	#footer-widget-4 {
-		position: absolute;
-		top: calc(-#{$footer-top-padding} / 2);	/* todo works on desktop but not mobile */
-		right: 0;
-	}
-
 	@include breakpoint-grid-layout {
 		display: flex;
+		padding-top: 35px;
 
 		.footer-widgets-block {
 			margin-left: 20px;
@@ -35,25 +42,89 @@ $footer-top-padding: 10%;
 	}
 }
 
+/*
+ * Column 1 (Menu, Social Media)
+ */
 #nav_menu-4 ul {
 	margin-left: 0;
 	list-style: none;
+	font-weight: 600;
+	font-size: 1.1em;
 
 	&:first-child {
 		padding-left: 0;
 	}
 
+	a {
+		color: $color-orange-57;
+	}
+
 	.sub-menu {
 		padding-left: 20px;
+		font-weight: 100;
 	}
 }
 
+.jetpack_widget_social_icons {
+
+	.widget-title {
+		text-align: left;
+		font-weight: 400;
+	}
+
+	a {
+		color: $white;
+	}
+}
+
+/*
+ * Column 2 (Subscribe, links)
+ */
 .widget_blog_subscription {
 	color: #454443;
 
 	input {
 		border: 1px solid #454443;
 		padding: 6px 10px 3px 10px;
+	}
+}
+
+
+/*
+ * Column 3 (Map)
+ */
+#custom_html-11 {
+	h4 {
+		font-size: 1.6em;
+	}
+}
+
+.umbrella {
+	display: block;
+	margin: 30px 0 0 40px;
+	width: 170px;
+}
+
+/*
+ * Column 4 (Jump to top)
+ */
+#footer-widget-4 {
+	position: absolute;
+	top: -$footer-top-padding;
+	right: 0;
+
+		#jump-to-top {
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			background-color: $color-blue-63;
+			background-image: url('images/jump-to-top.svg');
+			background-size: 30px 30px;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+
+	@include breakpoint-grid-layout {
 	}
 }
 

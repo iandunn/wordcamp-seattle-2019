@@ -130,7 +130,7 @@
 						</h4>
 						<a href="todo">Washington State Convention Center</a>
 
-						<img src="todo purple umbrella" alt="" />
+						<img class="umbrella" src="images/umbrella.png" alt="" />
 					</div>
 				</section>
 			</div>
@@ -138,8 +138,8 @@
 			<div id="footer-widget-4" class="footer-widgets-block">
 				<section id="custom_html-12" class="widget_text widget widget_custom_html">
 					<div class="textwidget custom-html-widget">
-						<a href="#top">
-							<img src="todo" alt="Jump to top of page" />
+						<a id="jump-to-top" href="#top">
+							<span class="screen-reader-text">Jump to top of page</span>
 						</a>
 				</section>
 			</div>
@@ -155,7 +155,6 @@
 
 			<span role="separator" aria-hidden="true"></span>
 
-		</div>
 		</div>
 
 		<div class="site-info">

@@ -621,28 +621,30 @@ h3 {
  * Footer
  */
 .site-footer {
-  padding: 40px 10%;
+  padding: 20px 10% 70px 10%;
   background-color: #1d3143;
   /* todo fix according to whateever is decided in https://github.com/iandunn/wordcamp-seattle-2019/issues/9 */
   color: #fcfcf8; }
+  .site-footer a {
+    color: #fff;
+    text-decoration: none; }
+  .site-footer a.button {
+    color: #fff; }
+    .site-footer a.button::before {
+      background-image: url(images/arrow-white.png); }
 
 .site-footer h2 {
   font-size: 1rem; }
 
 #footer-widgets {
-  position: relative;
-  /* todo horizontal scrolling for mobile */ }
-  #footer-widgets #footer-widget-4 {
-    position: absolute;
-    top: calc(-10% / 2);
-    /* todo works on desktop but not mobile */
-    right: 0; }
+  position: relative; }
   @supports (display: grid) {
     @media screen and (min-width: 700px) {
       #footer-widgets {
         display: -webkit-box;
         display: -ms-flexbox;
-        display: flex; }
+        display: flex;
+        padding-top: 35px; }
         #footer-widgets .footer-widgets-block {
           margin-left: 20px;
           -ms-flex-preferred-size: 33%;
@@ -650,19 +652,65 @@ h3 {
           #footer-widgets .footer-widgets-block:first-child {
             margin-left: 0; } } }
 
+/*
+ * Column 1 (Menu, Social Media)
+ */
 #nav_menu-4 ul {
   margin-left: 0;
-  list-style: none; }
+  list-style: none;
+  font-weight: 600;
+  font-size: 1.1em; }
   #nav_menu-4 ul:first-child {
     padding-left: 0; }
+  #nav_menu-4 ul a {
+    color: #f05c33; }
   #nav_menu-4 ul .sub-menu {
-    padding-left: 20px; }
+    padding-left: 20px;
+    font-weight: 100; }
 
+.jetpack_widget_social_icons .widget-title {
+  text-align: left;
+  font-weight: 400; }
+
+.jetpack_widget_social_icons a {
+  color: #fff; }
+
+/*
+ * Column 2 (Subscribe, links)
+ */
 .widget_blog_subscription {
   color: #454443; }
   .widget_blog_subscription input {
     border: 1px solid #454443;
     padding: 6px 10px 3px 10px; }
+
+/*
+ * Column 3 (Map)
+ */
+#custom_html-11 h4 {
+  font-size: 1.6em; }
+
+.umbrella {
+  display: block;
+  margin: 30px 0 0 40px;
+  width: 170px; }
+
+/*
+ * Column 4 (Jump to top)
+ */
+#footer-widget-4 {
+  position: absolute;
+  top: -20px;
+  right: 0; }
+  #footer-widget-4 #jump-to-top {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #71cad0;
+    background-image: url("images/jump-to-top.svg");
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center center; }
 
 .site-info {
   display: none;
