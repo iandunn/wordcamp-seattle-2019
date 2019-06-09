@@ -38,7 +38,7 @@ When you're ready to launch:
 
 1. Turn on Coming Soon mode, so visitors don't see the site in transition
 1. Switch to the CampSite 2017 theme
-1. Configure Remote CSS to point to the built `style.css` file in the GitHub repo
+1. Configure [Remote CSS](https://make.wordpress.org/community/2015/11/24/remote-css-plugin-launched-on-wordcamp-org/) to point to the built `style.css` file in the GitHub repo
 1. Create nav menus, widgets, etc to match what's in the static HTML files
 1. use the Additional CSS panel in the Custmoizers to quickly/easily make any tweaks that are needed
 1. Setup the webhook so that pushing changes to the Git repo automatically deploy them to the production site (see Remote CSS on-screen help).
@@ -49,6 +49,18 @@ When you're ready to launch:
 
 - Can get rid of custom .stylelintrc.json and just rely on wp coding standard plugin?
 - Fix any `@todo` notes throughout the repo.
+
+
+### Alternate Approach
+
+With this method, the production site still looks nice during development, but there's much less work transferring content between local and production.
+
+1. [Clone another WordCamp site](https://make.wordpress.org/community/2015/07/09/site-cloner-v1-is-now-available/) that's using the theme you want to use.
+1. Setup your header/footer/sidbar content on production.
+1. View the HTML source of the homepage, and save that to a `.html` file in this folder.
+1. Change the URL to the CSS file to be the local file here.
+1. Once you've finished implementing the design locally, remove the cloned theme's custom CSS and setup this stylesheet as the [Remote CSS](https://make.wordpress.org/community/2015/11/24/remote-css-plugin-launched-on-wordcamp-org/) URL.
+
 
 ### Using this approach for other camps
 
