@@ -128,7 +128,7 @@ $content_template = $_GET['page'] ?? 'front-page';
 	<link rel='stylesheet' id='campsite-2017-style-css' href='https://2019.seattle.wordcamp.org/wp-content/themes/campsite-2017/style.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='wordcamp_remote_css-css'  href='style.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='camptix-css' href='https://2019.seattle.wordcamp.org/wp-content/plugins/camptix/camptix.css?ver=1549494346' type='text/css' media='all' />
-	<link rel='stylesheet' id='camptix-css' href='https://2019.seattle.wordcamp.org/wp-content/plugins/jetpack/modules/widgets/social-icons/social-icons.css' type="text/css" media='all' />>
+	<link rel='stylesheet' id='camptix-css' href='https://2019.seattle.wordcamp.org/wp-content/plugins/jetpack/modules/widgets/social-icons/social-icons.css' type="text/css" media='all' />
 	<meta name="generator" content="WordPress 5.3-alpha-45284" />
 	<link rel='shortlink' href='https://2019.seattle.wordcamp.org/' />
 

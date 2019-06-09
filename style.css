@@ -7,9 +7,14 @@
  * Mixins
  */
 /*
- * This mimic's Core's `.alignfull` class.
+ * This is an alternative to Core's `.alignfull` class, but works very differently.
  *
- * You should use that if you can apply it directly to the element, but this is useful when that's not possible.
+ * If the Core class works for a given situation, it's probably better to use that than this. There are some
+ * situations where you can't apply that class, or it doesn't work well, though (e.g., the yellow banner in the
+ * header).
+ *
+ * @todo This is probably making some assumptions about how it will be used in the header, so may not be ready to
+ * use as a general purpose class across the site.
  */
 /*
  * Normalize browser inconsistencies
@@ -350,7 +355,7 @@ h3 {
  */
 .main-navigation {
   position: relative;
-  top: 75px;
+  top: 80px;
   /* todo need to add more breakpoints?
 	should be able to have absolutely positied image have auto height, but would still need to push menu down a fixed amount
 	could just have extra space between menu and this though
@@ -358,7 +363,7 @@ h3 {
   @supports (display: grid) {
     @media screen and (min-width: 700px) {
       .main-navigation {
-        top: 25px; } } }
+        top: 30px; } } }
 
 .site-header {
   padding-top: 20px;
@@ -385,31 +390,23 @@ h3 {
 /* Yellow info banner */
 #custom_html-8 {
   position: relative;
-  left: -1rem;
-  width: calc(100% + (2 * 1rem));
-  max-width: calc(100% + (2 * 1rem));
-  clear: both;
+  width: 100vw;
+  left: 0;
   position: absolute;
   top: 0;
   margin: 0;
-  height: 75px;
+  height: 80px;
   /* todo need to add more breakpoints?
 	should be able to have absolutely positied image have auto height, but would still need to push menu down a fixed amount
 	could just have extra space between menu and this though
 	*/
   background-color: #e9c544;
-  text-align: center; }
-  @media only screen and (min-width: 700px) {
-    #custom_html-8 {
-      margin-top: calc(2 * 1rem);
-      margin-bottom: calc(2 * 1rem);
-      left: calc(-12.5% - 75px);
-      width: calc(125% + 150px);
-      max-width: calc(125% + 150px); } }
+  text-align: center;
+  padding: 5px 10px; }
   @supports (display: grid) {
     @media screen and (min-width: 700px) {
       #custom_html-8 {
-        height: 25px; } } }
+        height: 30px; } } }
   @supports (display: grid) {
     @media screen and (min-width: 700px) {
       #custom_html-8 {

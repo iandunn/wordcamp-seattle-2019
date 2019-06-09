@@ -2,10 +2,10 @@
 // then use grid for bigger screens & modern browsers
 
 @mixin critical_info_banner_height( $property ) {
-	#{$property}: 75px;
+	#{$property}: 80px;
 
 	@include breakpoint-grid-layout {
-		#{$property}: 25px;
+		#{$property}: 30px;
 	}
 
 	/* todo need to add more breakpoints?
@@ -51,6 +51,7 @@
 	@include critical-info-banner-height( 'height' );
 	background-color: #e9c544;
 	text-align: center;
+	padding: 5px 10px;
 
 	@include breakpoint-grid-layout {
 		margin: 0;

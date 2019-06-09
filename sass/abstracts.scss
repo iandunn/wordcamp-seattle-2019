@@ -65,22 +65,17 @@ $font-size-h3: 2rem;
 }
 
 /*
- * This mimic's Core's `.alignfull` class.
+ * This is an alternative to Core's `.alignfull` class, but works very differently.
  *
- * You should use that if you can apply it directly to the element, but this is useful when that's not possible.
+ * If the Core class works for a given situation, it's probably better to use that than this. There are some
+ * situations where you can't apply that class, or it doesn't work well, though (e.g., the yellow banner in the
+ * header).
+ *
+ * @todo This is probably making some assumptions about how it will be used in the header, so may not be ready to
+ * use as a general purpose class across the site.
  */
 @mixin alignfull() {
 	position: relative;
-	left: -1rem;
-	width: calc(100% + (2 * 1rem));
-	max-width: calc(100% + (2 * 1rem));
-	clear: both;
-
-	@media only screen and (min-width: 700px) {
-		margin-top: calc(2 * 1rem);
-		margin-bottom: calc(2 * 1rem);
-		left: calc(-12.5% - 75px);
-		width: calc(125% + 150px);
-		max-width: calc(125% + 150px);
-	}
+	width: 100vw;
+	left: 0;
 }
