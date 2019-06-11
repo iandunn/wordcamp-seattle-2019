@@ -3,7 +3,8 @@ $footer-top-padding: 20px;
 
 .site-footer {
 	padding: $footer-top-padding $footer-left-padding 70px $footer-left-padding;
-	background-color: #1d3143;	/* todo fix according to whateever is decided in https://github.com/iandunn/wordcamp-seattle-2019/issues/9 */
+	background-color: #1d3143;
+	/* todo fix according to whateever is decided in https://github.com/iandunn/wordcamp-seattle-2019/issues/9 */
 	color: #fcfcf8;
 
 	a {
@@ -45,7 +46,7 @@ $footer-top-padding: 20px;
 /*
  * Column 1 (Menu, Social Media)
  */
-#nav_menu-4 ul {
+.menu-footer-container ul {
 	margin-left: 0;
 	list-style: none;
 	font-weight: 600;
@@ -113,21 +114,21 @@ $footer-top-padding: 20px;
 	top: -$footer-top-padding;
 	right: 0;
 
-		#jump-to-top {
-			display: inline-block;
-			width: 40px;
-			height: 40px;
-			background-color: $color-blue-63;
-			background-image: url('images/jump-to-top.svg');
-			background-size: 30px 30px;
-			background-repeat: no-repeat;
-			background-position: center center;
-		}
-
-	@include breakpoint-grid-layout {
+	#jump-to-top {
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		background-color: $color-blue-63;
+		background-image: url('images/jump-to-top.svg');
+		background-size: 30px 30px;
+		background-repeat: no-repeat;
+		background-position: center center;
 	}
+
+	@include breakpoint-grid-layout {}
 }
 
 .site-info {
-	display: none; /* This content is placed in a footer widget instead for styling purposes. */
+	display: none;
+	/* This content is placed in a footer widget instead for styling purposes. */
 }

@@ -2,10 +2,88 @@
 	text-align: center;
 }
 
+.content-widgets-block {
+	.widget {
+		max-width: $content-max-width;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.widget_nav_menu {
+		.menu {
+			list-style: none;
+			background-color: $color-green-96;
+			border: 1px solid $color-green-95;
+			margin: 0;
+			padding: 15px;
+			display: flex;
+			justify-content: center;
+		}
+
+		.menu-item {
+			padding-left: 10px;
+			padding-right: 10px;
+			border-right: 2px solid $color-gray-91;
+
+			a {
+				color: $color-orange-57;
+				text-decoration: none;
+				font-weight: bold;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.menu-item:last-of-type {
+			border-right: none;
+		}
+	}
+}
+
 //Fuel Your Business
 #content-widget-4 {
 	background-image: url(images/v2-rain.png);
-	background-repeat: repeat;
+	background-repeat: repeat-x;
+	background-size: 75%;
+	background-position-y: -25px;
+	padding-bottom: 3rem;
+	display: grid;
+	grid-template-columns: 33% 67%;
+	grid-template-rows: auto;
+	grid-template-areas:
+		"header header"
+		"posts posts"
+		"button menu";
+
+	.widget_text:first-of-type {
+		grid-area: header;
+	}
+
+	#custom_html-13 {
+		grid-area: button;
+		margin-right: 0;
+		margin-left: calc((100vw - 980px)/2);
+
+		.button {
+			display: inline-block;
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	.widget_rss {
+		grid-area: posts;
+		margin-bottom: 0;
+	}
+
+	.widget_nav_menu {
+		grid-area: menu;
+		margin-left: 0;
+		margin-right: calc((100vw - 980px)/2);
+		padding-left: 1rem;
+	}
 }
 
 .widget_rss {
@@ -22,7 +100,7 @@
 			border: 2px solid $color-border;
 			background-color: $white;
 			padding: 2rem;
-			margin: 2rem 0;
+			margin-bottom: 1.5rem;
 
 			a {
 				color: $black;

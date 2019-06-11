@@ -25,4 +25,23 @@
 			</li>
 		</ul>
 	</section>
+	<!-- HTML WIDGET -->
+	<section id="custom_html-13" class="widget_text widget widget_custom_html">
+		<div class="textwidget custom-html-widget">
+		<!-- HTML WIDGET CONTENT STARTS HERE -->
+			<a href="#" class="button arrow arrow-white button-large">Blog</a>
+		<!-- WIDGET CONTENT ENDS ABOVE HERE -->
+		</div>
+	</section>
+	<!-- NAVIGATION WIDGET -->
+	<section id="nav_menu-4" class="widget widget_nav_menu">
+		<div class="menu-where-to-stay-container">
+			<ul id="menu-where-to-stay" class="menu">
+				<li id="menu-item-49" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49"><a href="http://#">Where to Stay</a></li>
+				<li id="menu-item-50" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50"><a href="http://#">How to Get Around</a></li>
+				<li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51"><a href="http://#">Things to Do</a></li>
+				<li id="menu-item-52" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-52"><a href="http://#">Where to Eat</a></li>
+			</ul>
+		</div>
+	</section>
 </div>

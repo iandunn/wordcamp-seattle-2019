@@ -12,6 +12,10 @@ a.button {
 	font-weight: 500;
 	color: $white;
 	text-decoration: none;
+
+	&:hover {
+		background-color: darken($color-orange-57, 15%);
+	}
 }
 
 button.arrow::before,
@@ -27,8 +31,17 @@ a.arrow::before {
 	margin-right: 8px;
 }
 
+button.arrow.arrow-white::before,
+a.arrow.arrow-white::before {
+	background-image: url(images/arrow-white.png);
+}
+
 button {
 	opacity: 0.8;
+}
+
+.button-large {
+	font-size: 24px;
 }
 
 h1,

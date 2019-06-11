@@ -1,11 +1,12 @@
 <!-- INFO JUST FOR YOU SECTION -->
-<!-- HTML WIDGET -->
+
 <div id="content-widget-3" class="content-widgets-block">
+	<!-- HTML WIDGET -->
 	<section id="custom_html-3" class="widget_text widget widget_custom_html">
-		<!-- WIDGET TITLE -->
+		<!-- HTML WIDGET TITLE -->
 		<h2 class="widget-title">Info Just for You</h2>
 		<div class="textwidget custom-html-widget">
-		<!-- WIDGET CONTENT STARTS HERE -->
+		<!-- HTML WIDGET CONTENT STARTS HERE -->
 			<div class="wp-block-columns has-2-columns info-block">
 				<div class="wp-block-column info-column info-column--attendees">
 					<h3 class="info-header">Attendees</h3>

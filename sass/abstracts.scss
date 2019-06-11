@@ -1,6 +1,8 @@
 /*
  * Variables
  */
+$content-max-width: 980px;
+
 
 /* COLORS */
 
@@ -41,7 +43,8 @@ $color-blue-88: hsl(172, 37%, 88%);
 // Misc
 $color-blue-63: hsl(184, 50%, 63%);
 
-$color-green-96: hsl(104, 58%, 96%);
+$color-green-96: hsl(104, 58%, 96%); //minty green used on backgrounds
+$color-green-95: hsl(104, 48%, 95%); //used on borders for the minty green
 
 $color-gray-91: hsl(240, 4%, 91%);
 
