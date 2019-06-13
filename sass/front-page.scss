@@ -4,7 +4,7 @@
 
 .content-widgets-block {
 	.widget {
-		max-width: $content-max-width;
+		max-width: $content-max-width;	/* todo should this be set on .site-content instead, so that all of the content is limited? */
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -65,6 +65,7 @@
 		grid-area: button;
 		margin-right: 0;
 		margin-left: calc((100vw - 980px)/2);
+		/* todo use $content-max-width here and in .widget_nav_menu below? or is this just also 980px by coincidence? */
 
 		.button {
 			display: inline-block;

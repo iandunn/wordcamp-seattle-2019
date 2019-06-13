@@ -389,39 +389,61 @@ h3 {
 /*
  * Header
  */
-.main-navigation {
-  position: relative;
-  top: 80px;
+.site-header {
+  padding-top: 80px;
   /* todo need to add more breakpoints?
 	should be able to have absolutely positied image have auto height, but would still need to push menu down a fixed amount
 	could just have extra space between menu and this though
-	*/ }
-  @supports (display: grid) {
-    @media screen and (min-width: 700px) {
-      .main-navigation {
-        top: 30px; } } }
-
-.site-header {
-  padding-top: 20px;
+	*/
   background-color: #a9dada;
   /* todo convert to var, along w/ any others. see issue #9 for naming convention. */
-  background-image: url("./images/v2-hero-mountain.png");
-  /* todo the image needs to blend into the green background, otherwise cuts off abruptly on wide screens */
-  /* todo replace w/ svg -- https://drive.google.com/open?id=1WpNQXyTbpIUZAwTepKUmwavp4WbkeDOn */
-  background-size: contain;
-  /* todo this needs work */
+  background-image: url("./images/mountain-cropped.svg");
+  background-size: auto 40%;
+  /* todo this isn't perfect */
   background-repeat: no-repeat;
   background-position: bottom;
   text-align: center; }
+  @media screen and (min-width: 380px) {
+    .site-header {
+      padding-top: 55px; } }
+  @supports (display: grid) {
+    @media screen and (min-width: 700px) {
+      .site-header {
+        padding-top: 30px; } } }
+  @supports (display: grid) {
+    @media screen and (min-width: 700px) {
+      .site-header {
+        background-size: 100% auto;
+        /* todo this isn't perfect */ } } }
+
+.menu-toggle {
+  width: 100%; }
 
 #header-widgets {
   max-width: 900px;
   margin: 0 auto;
+  padding: 0 80px;
   background-image: url("./images/v2-tent.png");
   background-size: 50%;
   /* todo this needs work */
   background-repeat: no-repeat;
-  background-position: bottom left 15%; }
+  background-position: bottom left 15%;
+  /* todo bottom isn't always flush with parent bottom on mobile */ }
+
+#header-widget-1 {
+  margin-top: 80px;
+  /* todo need to add more breakpoints?
+	should be able to have absolutely positied image have auto height, but would still need to push menu down a fixed amount
+	could just have extra space between menu and this though
+	*/
+  padding-top: 60px; }
+  @media screen and (min-width: 380px) {
+    #header-widget-1 {
+      margin-top: 55px; } }
+  @supports (display: grid) {
+    @media screen and (min-width: 700px) {
+      #header-widget-1 {
+        margin-top: 30px; } } }
 
 /* Yellow info banner */
 #custom_html-8 {
@@ -439,6 +461,9 @@ h3 {
   background-color: #e9c544;
   text-align: center;
   padding: 5px 10px; }
+  @media screen and (min-width: 380px) {
+    #custom_html-8 {
+      height: 55px; } }
   @supports (display: grid) {
     @media screen and (min-width: 700px) {
       #custom_html-8 {
@@ -448,8 +473,21 @@ h3 {
       #custom_html-8 {
         margin: 0; } } }
 
-.menu-toggle {
-  width: 100%; }
+#header-widgets .headline {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "headline-logo headline" "sub-headline  sub-headline" "location      location"; }
+  #header-widgets .headline img {
+    grid-area: headline-logo;
+    width: 100px; }
+  #header-widgets .headline h3 {
+    grid-area: headline;
+    text-transform: uppercase; }
+  #header-widgets .headline .sub-headline {
+    grid-area: sub-headline; }
+  #header-widgets .headline a {
+    grid-area: location; }
 
 /* todo abstract button styles since many are shared across header/front-page/footer */
 .widget_blog_subscription {
@@ -485,15 +523,13 @@ h3 {
       display: grid;
       grid-template-columns: 70% 30%;
       grid-template-rows: auto;
-      grid-template-areas: "logo  subscribe" "theme subscribe" "dates tickets"; }
-    #custom_html-2 {
-      grid-area: subscribe; }
+      grid-template-areas: "headline-container subscribe" "headline-container grab-tickets"; }
     #custom_html-3 {
-      grid-area: theme; }
-    #media_image-2 {
-      grid-area: logo; }
+      grid-area: headline-container; }
+    #header-widgets .jetpack_subscription_widget {
+      grid-area: subscribe; }
     #custom_html-4 {
-      grid-area: tickets; } } }
+      grid-area: grab-tickets; } } }
 
 /*
  * Content that applies to all posts/pages
@@ -506,6 +542,7 @@ h3 {
 
 .content-widgets-block .widget {
   max-width: 980px;
+  /* todo should this be set on .site-content instead, so that all of the content is limited? */
   margin-left: auto;
   margin-right: auto; }
 
@@ -551,7 +588,8 @@ h3 {
   #content-widget-4 #custom_html-13 {
     grid-area: button;
     margin-right: 0;
-    margin-left: calc((100vw - 980px)/2); }
+    margin-left: calc((100vw - 980px)/2);
+    /* todo use $content-max-width here and in .widget_nav_menu below? or is this just also 980px by coincidence? */ }
     #content-widget-4 #custom_html-13 .button {
       display: inline-block;
       width: 100%;
@@ -704,7 +742,9 @@ h3 {
   font-size: 1rem; }
 
 #footer-widgets {
-  position: relative; }
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto; }
   @supports (display: grid) {
     @media screen and (min-width: 700px) {
       #footer-widgets {

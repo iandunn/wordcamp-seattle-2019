@@ -50,15 +50,16 @@
 					&#8226; <a href="/location">Washington State Convention Center</a>
 					&#8226; <a href="">#WCSEA</a></div>
 			</section>
+
 			<section id="custom_html-3" class="widget_text widget widget_custom_html">
 				<div class="textwidget custom-html-widget">
 					<div class="headline">
 
-						<img src="https://2019.seattle.wordcamp.test/files/2019/05/cropped-WP-SpaceNeedle-logo.png" alt="" />
+						<img src="images/logo.png" alt="" />
 
 						<h3>Explore the Possibilities</h3>
 
-						<p class="">
+						<p class="sub-headline">
 							WordCamp Seattle
 							&#8226;
 							Nov 12-13 2019

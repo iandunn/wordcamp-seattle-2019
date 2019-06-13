@@ -27,6 +27,8 @@ $footer-top-padding: 20px;
 
 #footer-widgets {
 	position: relative;
+	max-width: $content-max-width;
+	margin: 0 auto;
 
 	@include breakpoint-grid-layout {
 		display: flex;
