@@ -111,7 +111,7 @@
 					<div class="textwidget custom-html-widget">
 						<a href="/tickets" class="button arrow">Grab Tickets Now!</a>
 
-						<a class="site-info-network button arrow" href="https://central.wordcamp.org/">Go to WordCamp Central</a>
+						<a class="site-info-network button arrow" href="https://central.wordcamp.org/">WordCamp Central</a>
 
 						<a class="site-info-generator" href="https://wordpress.org/" title="A Semantic Personal Publishing Platform" rel="generator"> Proudly powered by WordPress </a>
 					</div>
@@ -143,17 +143,6 @@
 						</a>
 				</section>
 			</div>
-
-		</div>
-
-		<div class="site-info">
-			<a class="site-info-generator" href="https://wordpress.org/" title="A Semantic Personal Publishing Platform" rel="generator"> Proudly powered by WordPress </a>
-
-			<span role="separator" aria-hidden="true"></span>
-
-			<a class="site-info-network" href="https://central.wordcamp.org/">Go to WordCamp Central</a>
-
-			<span role="separator" aria-hidden="true"></span>
 
 		</div>
 

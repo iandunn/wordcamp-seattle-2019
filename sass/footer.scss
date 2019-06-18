@@ -83,13 +83,20 @@ $footer-top-padding: 20px;
 /*
  * Column 2 (Subscribe, links)
  */
-.widget_blog_subscription {
-	color: #454443;
+#footer-widget-2 {
+	text-align: center;
+}
 
-	input {
-		border: 1px solid #454443;
-		padding: 6px 10px 3px 10px;
-	}
+footer .widget_blog_subscription {
+	margin-bottom: 12px;
+}
+
+.site-info-network {
+	margin: 12px 0 20px 0;
+}
+
+.site-info-generator {
+	display: block;
 }
 
 

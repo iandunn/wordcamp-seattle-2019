@@ -65,3 +65,17 @@ h2 {
 h3 {
 	font-size: $font-size-h3;
 }
+
+.widget_blog_subscription {
+	display: inline-block;
+	width: 225px;
+	padding: 0 20px;
+	color: #454443;
+	background-color: #f3fbf0;
+	text-align: center;
+
+	input {
+		border: 1px solid #454443;
+		padding: 6px 10px 3px 10px;
+	}
+}

@@ -383,6 +383,17 @@ h2 {
 h3 {
   font-size: 2rem; }
 
+.widget_blog_subscription {
+  display: inline-block;
+  width: 225px;
+  padding: 0 20px;
+  color: #454443;
+  background-color: #f3fbf0;
+  text-align: center; }
+  .widget_blog_subscription input {
+    border: 1px solid #454443;
+    padding: 6px 10px 3px 10px; }
+
 /*
  * Overall site layout
  */
@@ -490,13 +501,6 @@ h3 {
     grid-area: location; }
 
 /* todo abstract button styles since many are shared across header/front-page/footer */
-.widget_blog_subscription {
-  display: inline-block;
-  width: 225px;
-  background-color: #f3fbf0;
-  padding: 0 20px;
-  text-align: center; }
-
 @media screen and (min-width: 37.5em) {
   .page-navigation-container ul {
     display: -webkit-box;
@@ -785,11 +789,17 @@ h3 {
 /*
  * Column 2 (Subscribe, links)
  */
-.widget_blog_subscription {
-  color: #454443; }
-  .widget_blog_subscription input {
-    border: 1px solid #454443;
-    padding: 6px 10px 3px 10px; }
+#footer-widget-2 {
+  text-align: center; }
+
+footer .widget_blog_subscription {
+  margin-bottom: 12px; }
+
+.site-info-network {
+  margin: 12px 0 20px 0; }
+
+.site-info-generator {
+  display: block; }
 
 /*
  * Column 3 (Map)

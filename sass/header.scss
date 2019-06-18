@@ -101,15 +101,6 @@
 }
 
 /* todo abstract button styles since many are shared across header/front-page/footer */
-
-.widget_blog_subscription {
-	display: inline-block;
-	width: 225px;
-	background-color: #f3fbf0;
-	padding: 0 20px;
-	text-align: center;
-}
-
 @media screen and (min-width: 37.5em) {
 	.page-navigation-container ul {
 		display: flex;
