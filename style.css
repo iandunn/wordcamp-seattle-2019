@@ -409,10 +409,9 @@ h3 {
   background-color: #a9dada;
   /* todo convert to var, along w/ any others. see issue #9 for naming convention. */
   background-image: url("./images/mountain-cropped.svg");
-  background-size: auto 40%;
-  /* todo this isn't perfect */
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: bottom -5px center;
   text-align: center; }
   @media screen and (min-width: 380px) {
     .site-header {
@@ -430,16 +429,14 @@ h3 {
 .menu-toggle {
   width: 100%; }
 
+@media screen and (min-width: 37.5em) {
+  .main-navigation {
+    margin-top: 8px; } }
+
 #header-widgets {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 80px;
-  background-image: url("./images/v2-tent.png");
-  background-size: 50%;
-  /* todo this needs work */
-  background-repeat: no-repeat;
-  background-position: bottom left 15%;
-  /* todo bottom isn't always flush with parent bottom on mobile */ }
+  padding: 0 80px; }
 
 #header-widget-1 {
   margin-top: 80px;
@@ -484,21 +481,44 @@ h3 {
       #custom_html-8 {
         margin: 0; } } }
 
+#custom_html-3 {
+  margin-bottom: 0; }
+
 #header-widgets .headline {
+  /* todo margins aren't even at 428px wide viewport. lots of room on left side, none on right side */
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 80px auto;
   grid-template-rows: auto auto auto;
-  grid-template-areas: "headline-logo headline" "sub-headline  sub-headline" "location      location"; }
+  grid-template-areas: "headline-logo headline" "sub-headline  sub-headline" "location      location";
+  text-align: left; }
   #header-widgets .headline img {
     grid-area: headline-logo;
     width: 100px; }
   #header-widgets .headline h3 {
     grid-area: headline;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    padding: 8px 0 0 20px; }
   #header-widgets .headline .sub-headline {
-    grid-area: sub-headline; }
+    grid-area: sub-headline;
+    margin: 5px 0 0 0;
+    font-weight: 600;
+    font-size: 1.5em; }
   #header-widgets .headline a {
-    grid-area: location; }
+    grid-area: location;
+    text-decoration: none;
+    color: #000; }
+
+@supports (display: grid) {
+  @media screen and (min-width: 700px) {
+    #tent {
+      /* todo maybe have on mobile too, if not too hard */
+      height: 200px;
+      /* todo maybe match this with height of mountain image or something, so that mountain never overlaps text above */
+      background-image: url("./images/v2-tent.png");
+      background-size: 70%;
+      /* todo this needs work */
+      background-repeat: no-repeat;
+      background-position: bottom left 15%; } } }
 
 /* todo abstract button styles since many are shared across header/front-page/footer */
 @media screen and (min-width: 37.5em) {
@@ -517,6 +537,9 @@ h3 {
       border-right: none; }
   .page-navigation-container a {
     color: #d96036; } }
+
+#header-widgets .jetpack_subscription_widget {
+  margin-top: 30px; }
 
 @supports (display: grid) {
   @media screen and (min-width: 700px) {
@@ -586,13 +609,16 @@ h3 {
   display: grid;
   grid-template-columns: 33% 67%;
   grid-template-rows: auto;
-  grid-template-areas: "header header" "posts posts" "button menu"; }
+  grid-template-areas: "header header" "posts posts" "button menu";
+  display: none;
+  /* todo don't commit, just so you can work around horizontal scrolling */ }
   #content-widget-4 .widget_text:first-of-type {
     grid-area: header; }
   #content-widget-4 #custom_html-13 {
     grid-area: button;
     margin-right: 0;
     margin-left: calc((100vw - 980px)/2);
+    /* todo the text doesn't show up in firefox b/c the width of the button is partially off screen. if you `text-align: right` you can see it. problem is `margin-left` positions button partially off screen */
     /* todo use $content-max-width here and in .widget_nav_menu below? or is this just also 980px by coincidence? */ }
     #content-widget-4 #custom_html-13 .button {
       display: inline-block;
@@ -602,6 +628,7 @@ h3 {
     grid-area: posts;
     margin-bottom: 0; }
   #content-widget-4 .widget_nav_menu {
+    /* todo this creates horizontal scrolling in firefox on mobile */
     grid-area: menu;
     margin-left: 0;
     margin-right: calc((100vw - 980px)/2);

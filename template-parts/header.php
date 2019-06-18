@@ -68,6 +68,8 @@
 						<a href="/location">Washington State Convention Center</a>
 
 					</div>
+
+					<div id="tent"></div>
 				</div>
 			</section>
 

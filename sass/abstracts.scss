@@ -75,6 +75,12 @@ $font-size-h3: 2rem;
 	}
 }
 
+@mixin breakpoint-full-navigation() {
+	@media screen and (min-width: 37.5em) {
+		@content;
+	}
+}
+
 /*
  * This is an alternative to Core's `.alignfull` class, but works very differently.
  *

@@ -65,6 +65,7 @@
 		grid-area: button;
 		margin-right: 0;
 		margin-left: calc((100vw - 980px)/2);
+		/* todo the text doesn't show up in firefox b/c the width of the button is partially off screen. if you `text-align: right` you can see it. problem is `margin-left` positions button partially off screen */
 		/* todo use $content-max-width here and in .widget_nav_menu below? or is this just also 980px by coincidence? */
 
 		.button {
@@ -80,6 +81,8 @@
 	}
 
 	.widget_nav_menu {
+		/* todo this creates horizontal scrolling in firefox on mobile */
+
 		grid-area: menu;
 		margin-left: 0;
 		margin-right: calc((100vw - 980px)/2);
