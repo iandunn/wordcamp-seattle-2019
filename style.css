@@ -6,6 +6,8 @@
 /*
  * Mixins
  */
+/* greater than max content width */
+/* should have one breakpoint regardless of grid? */
 /*
  * This is an alternative to Core's `.alignfull` class, but works very differently.
  *
@@ -457,6 +459,7 @@ h3 {
 #custom_html-8 {
   position: relative;
   width: 100vw;
+  max-width: 100%;
   left: 0;
   position: absolute;
   top: 0;
@@ -582,76 +585,201 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
 
 .content-widgets-block .widget_nav_menu .menu-item {
   padding-left: 10px;
-  padding-right: 10px;
-  border-right: 2px solid #e7e7e9; }
+  padding-right: 10px; }
   .content-widgets-block .widget_nav_menu .menu-item a {
     color: #f05c33;
     text-decoration: none;
-    font-weight: bold; }
+    font-weight: bold;
+    padding: 8px 0;
+    text-align: center;
+    display: block; }
     .content-widgets-block .widget_nav_menu .menu-item a:hover {
       text-decoration: underline; }
 
 .content-widgets-block .widget_nav_menu .menu-item:last-of-type {
   border-right: none; }
 
-#content-widget-4 {
-  background-image: url(images/v2-rain.png);
-  background-repeat: repeat-x;
-  background-size: 75%;
-  background-position-y: -25px;
-  padding-bottom: 3rem;
-  display: grid;
-  grid-template-columns: 33% 67%;
-  grid-template-rows: auto;
-  grid-template-areas: "header header" "posts posts" "button menu";
-  display: none;
-  /* todo don't commit, just so you can work around horizontal scrolling */ }
-  #content-widget-4 .widget_text:first-of-type {
-    grid-area: header; }
-  #content-widget-4 #custom_html-13 {
-    grid-area: button;
-    margin-right: 0;
-    margin-left: calc((100vw - 980px)/2);
-    /* todo the text doesn't show up in firefox b/c the width of the button is partially off screen. if you `text-align: right` you can see it. problem is `margin-left` positions button partially off screen */
-    /* todo use $content-max-width here and in .widget_nav_menu below? or is this just also 980px by coincidence? */ }
-    #content-widget-4 #custom_html-13 .button {
-      display: inline-block;
-      width: 100%;
-      text-align: center; }
-  #content-widget-4 .widget_rss {
-    grid-area: posts;
-    margin-bottom: 0; }
-  #content-widget-4 .widget_nav_menu {
-    /* todo this creates horizontal scrolling in firefox on mobile */
-    grid-area: menu;
-    margin-left: 0;
-    margin-right: calc((100vw - 980px)/2);
-    padding-left: 1rem; }
-
-.widget_rss .widget-title {
-  display: none; }
-
 .widget_rss ul {
   list-style: none;
   margin: 0;
   padding: 0; }
-  .widget_rss ul li {
+  .widget_rss ul li a {
+    color: #000;
+    font-size: 24px;
+    text-decoration: none; }
+    .widget_rss ul li a:hover {
+      text-decoration: underline; }
+
+@media screen and (min-width: 500px) {
+  .content-widgets-block .widget_nav_menu .menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .content-widgets-block .widget_nav_menu .menu-item {
+    border-right: 2px solid #e7e7e9; }
+    .content-widgets-block .widget_nav_menu .menu-item a {
+      padding: 0; }
+  .content-widgets-block .widget_nav_menu .menu-item:last-of-type {
+    border-right: none; } }
+
+#content-widget-1 {
+  padding: 4rem 1rem 2rem;
+  background-image: url(images/v2-rain.png);
+  background-repeat: repeat;
+  background-size: 150%;
+  background-position-y: -25px;
+  padding-bottom: 3rem; }
+  #content-widget-1 img {
+    width: 100%; }
+  #content-widget-1 .wordcamp-wrapper {
+    padding: 1rem;
+    background-color: #f2fbef; }
+  #content-widget-1 .button {
+    width: 100%; }
+  #content-widget-1 .widget_rss {
     border: 2px solid #d5ece9;
     background-color: #fff;
-    padding: 2rem;
-    margin-bottom: 1.5rem; }
-    .widget_rss ul li a {
-      color: #000;
-      font-size: 24px;
-      text-decoration: none; }
-      .widget_rss ul li a:hover {
-        text-decoration: underline; }
+    padding: 2rem; }
+    #content-widget-1 .widget_rss .widget-title {
+      text-align: left;
+      font-size: 18px; }
+      #content-widget-1 .widget_rss .widget-title::after {
+        content: "";
+        height: 5px;
+        width: 60px;
+        margin-top: 5px;
+        background-color: #eac234;
+        display: block; }
+      #content-widget-1 .widget_rss .widget-title .rss-widget-icon {
+        display: none; }
+      #content-widget-1 .widget_rss .widget-title a {
+        color: #000;
+        cursor: default;
+        text-decoration: none; }
+
+@supports (display: grid) {
+  @media screen and (min-width: 700px) {
+    #content-widget-1 {
+      padding-top: 6rem;
+      display: grid;
+      grid-template-columns: 33% 34% 33%;
+      grid-template-rows: auto;
+      grid-template-areas: "image_intro intro         intro" "image_intro button_intro  button_intro" "sched       sched         image_sched" "button_sched button_sched image_sched" "menu        menu          menu"; }
+      #content-widget-1 .widget_rss {
+        grid-area: sched;
+        margin-left: calc((98vw - 980px)/2);
+        margin-right: 1rem; }
+      #content-widget-1 .widget_nav_menu {
+        grid-area: menu;
+        margin-left: calc((98vw - 980px)/2);
+        margin-right: calc((98vw - 980px)/2); }
+    @supports ((-o-object-fit: cover) or (object-fit: cover)) {
+      .widget_media_image img {
+        -o-object-fit: cover;
+           object-fit: cover;
+        height: 100%;
+        width: 100%; } }
+    #media_image-3 {
+      grid-area: image_intro;
+      margin-left: calc((98vw - 980px)/2); }
+    #media_image-5 {
+      grid-area: image_sched;
+      margin-right: calc((98vw - 980px)/2); }
+    #custom_html-20 {
+      grid-area: intro;
+      margin-right: calc((98vw - 980px)/2);
+      margin-left: 1rem; }
+    #custom_html-18 {
+      grid-area: button_intro;
+      margin-right: calc((98vw - 980px)/2);
+      margin-left: 1rem; }
+    #custom_html-16 {
+      grid-area: button_sched;
+      margin-left: calc((98vw - 980px)/2);
+      margin-right: 1rem; } } }
+
+#content-widget-4 {
+  padding: 2rem 1rem;
+  background-image: url(images/v2-rain.png);
+  background-repeat: repeat;
+  background-size: 150%;
+  background-position-y: -25px;
+  padding-bottom: 3rem; }
+  #content-widget-4 #custom_html-13 .button {
+    display: inline-block;
+    width: 100%;
+    text-align: center; }
+  #content-widget-4 .widget_rss {
+    margin-bottom: 0; }
+    #content-widget-4 .widget_rss .widget-title {
+      display: none; }
+    #content-widget-4 .widget_rss ul li {
+      border: 2px solid #d5ece9;
+      background-color: #fff;
+      padding: 2rem;
+      margin-bottom: 1.5rem; }
+
+@supports (display: grid) {
+  @media screen and (min-width: 700px) {
+    #content-widget-4 {
+      background-image: url(images/v2-mug.png), url(images/v2-rain.png);
+      background-repeat: no-repeat, repeat;
+      background-size: 120px, 100%;
+      background-position-y: 20px, -25px;
+      background-position-x: 97%, 0;
+      padding-bottom: 3rem;
+      display: grid;
+      grid-template-columns: 33% 67%;
+      grid-template-rows: auto;
+      grid-template-areas: "header header" "posts posts" "button menu"; }
+      #content-widget-4 .widget_text:first-of-type {
+        grid-area: header; }
+      #content-widget-4 #custom_html-13 {
+        grid-area: button;
+        margin-right: 0;
+        margin-left: 0; }
+        #content-widget-4 #custom_html-13 .button {
+          display: inline-block;
+          width: 100%;
+          text-align: center; }
+      #content-widget-4 .widget_rss {
+        grid-area: posts;
+        margin-bottom: 0; }
+      #content-widget-4 .widget_nav_menu {
+        /* todo this creates horizontal scrolling in firefox on mobile */
+        grid-area: menu;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 1rem; } } }
+
+@supports (display: grid) {
+  @media screen and (min-width: 1020px) {
+    #content-widget-4 {
+      background-position-x: 90%, 0; }
+      #content-widget-4 .widget_nav_menu {
+        margin-right: calc((98vw - 980px)/2);
+        padding-left: 1rem; }
+      #content-widget-4 #custom_html-13 {
+        margin-left: calc((98vw - 980px)/2); } } }
+
+/* INFO JUST FOR YOU */
+#content-widget-3 {
+  background-color: #f2fbef;
+  padding: 2rem 1rem; }
 
 .info-column {
   padding: 1rem; }
@@ -685,8 +813,8 @@ h3 {
   margin-left: -5px;
   margin-right: -5px; }
   .info-linklist li {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%; }
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%; }
     .info-linklist li.list-item-wide {
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%; }
@@ -740,6 +868,12 @@ h3 {
     .info-column--volunteers .info-linklist a:hover {
       background-color: #2c5168; }
 
+@media screen and (min-width: 500px) {
+  .info-linklist li {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%; } }
+
+/* override core settings */
 @media (min-width: 600px) {
   .info-column.wp-block-column {
     -ms-flex-preferred-size: calc(50% - 8px);

@@ -1,10 +1,13 @@
+$calc_margin: calc((98vw - #{$content-max-width})/2); //use 98vw because vw includes scrollbars
+
 .widget-title {
 	text-align: center;
 }
 
 .content-widgets-block {
 	.widget {
-		max-width: $content-max-width;	/* todo should this be set on .site-content instead, so that all of the content is limited? */
+		max-width: $content-max-width;
+		/* todo should this be set on .site-content instead, so that all of the content is limited? */
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -17,18 +20,21 @@
 			margin: 0;
 			padding: 15px;
 			display: flex;
+			flex-direction: column;
 			justify-content: center;
 		}
 
 		.menu-item {
 			padding-left: 10px;
 			padding-right: 10px;
-			border-right: 2px solid $color-gray-91;
 
 			a {
 				color: $color-orange-57;
 				text-decoration: none;
 				font-weight: bold;
+				padding: 8px 0;
+				text-align: center;
+				display: block;
 
 				&:hover {
 					text-decoration: underline;
@@ -42,69 +48,13 @@
 	}
 }
 
-//Fuel Your Business
-#content-widget-4 {
-	background-image: url(images/v2-rain.png);
-	background-repeat: repeat-x;
-	background-size: 75%;
-	background-position-y: -25px;
-	padding-bottom: 3rem;
-	display: grid;
-	grid-template-columns: 33% 67%;
-	grid-template-rows: auto;
-	grid-template-areas:
-		"header header"
-		"posts posts"
-		"button menu";
-
-	.widget_text:first-of-type {
-		grid-area: header;
-	}
-
-	#custom_html-13 {
-		grid-area: button;
-		margin-right: 0;
-		margin-left: calc((100vw - 980px)/2);
-		/* todo the text doesn't show up in firefox b/c the width of the button is partially off screen. if you `text-align: right` you can see it. problem is `margin-left` positions button partially off screen */
-		/* todo use $content-max-width here and in .widget_nav_menu below? or is this just also 980px by coincidence? */
-
-		.button {
-			display: inline-block;
-			width: 100%;
-			text-align: center;
-		}
-	}
-
-	.widget_rss {
-		grid-area: posts;
-		margin-bottom: 0;
-	}
-
-	.widget_nav_menu {
-		/* todo this creates horizontal scrolling in firefox on mobile */
-
-		grid-area: menu;
-		margin-left: 0;
-		margin-right: calc((100vw - 980px)/2);
-		padding-left: 1rem;
-	}
-}
-
 .widget_rss {
-	.widget-title {
-		display: none;
-	}
-
 	ul {
 		list-style: none;
 		margin: 0;
 		padding: 0;
 
 		li {
-			border: 2px solid $color-border;
-			background-color: $white;
-			padding: 2rem;
-			margin-bottom: 1.5rem;
 
 			a {
 				color: $black;
@@ -117,6 +67,258 @@
 			}
 		}
 	}
+}
+
+@include breakpoint-tablet-up {
+	.content-widgets-block {
+		.widget_nav_menu {
+			.menu {
+				flex-direction: row;
+				justify-content: center;
+			}
+
+			.menu-item {
+				border-right: 2px solid $color-gray-91;
+
+				a {
+					padding: 0;
+				}
+			}
+
+			.menu-item:last-of-type {
+				border-right: none;
+			}
+		}
+	}
+}
+
+//SCHEDULE ETC
+#content-widget-1 {
+	padding: 4rem 1rem 2rem;
+	background-image: url(images/v2-rain.png);
+	background-repeat: repeat;
+	background-size: 150%;
+	background-position-y: -25px;
+	padding-bottom: 3rem;
+
+	img {
+		width: 100%;
+	}
+
+	.wordcamp-wrapper {
+		padding: 1rem;
+		background-color: $color-green-96;
+	}
+
+	.button {
+		width: 100%;
+	}
+
+	.widget_rss {
+		border: 2px solid $color-border;
+		background-color: $white;
+		padding: 2rem;
+
+		.widget-title {
+			text-align: left;
+			font-size: 18px;
+
+			&::after {
+				content: "";
+				height: 5px;
+				width: 60px;
+				margin-top: 5px;
+				background-color: $color-yellow-56;
+				display: block;
+			}
+
+			.rss-widget-icon {
+				display: none;
+			}
+
+			a {
+				color: $black;
+				cursor: default;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+@include breakpoint-grid-layout {
+	#content-widget-1 {
+		padding-top: 6rem;
+		display: grid;
+		grid-template-columns: 33% 34% 33%;
+		grid-template-rows: auto;
+		grid-template-areas:
+			"image_intro intro         intro"
+			"image_intro button_intro  button_intro"
+			"sched       sched         image_sched"
+			"button_sched button_sched image_sched"
+			"menu        menu          menu";
+
+		.widget_rss {
+			grid-area: sched;
+			margin-left: $calc_margin;
+			margin-right: 1rem;
+		}
+
+		.widget_nav_menu {
+			grid-area: menu;
+			margin-left: $calc_margin;
+			margin-right: $calc_margin;
+		}
+	}
+
+	.widget_media_image {
+		@supports (object-fit: cover) {
+			img {
+				object-fit: cover;
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+
+	//top image
+	#media_image-3 {
+		grid-area: image_intro;
+		margin-left: $calc_margin;
+	}
+
+	//bottom image
+	#media_image-5 {
+		grid-area: image_sched;
+		margin-right: $calc_margin;
+	}
+
+	//what is wordcamp
+	#custom_html-20 {
+		grid-area: intro;
+		margin-right: $calc_margin;
+		margin-left: 1rem;
+	}
+
+	//what is wc button
+	#custom_html-18 {
+		grid-area: button_intro;
+		margin-right: $calc_margin;
+		margin-left: 1rem;
+	}
+
+	//schedule button
+	#custom_html-16 {
+		grid-area: button_sched;
+		margin-left: $calc_margin;
+		margin-right: 1rem;
+	}
+}
+
+
+//Fuel Your Business
+#content-widget-4 {
+	padding: 2rem 1rem;
+	background-image: url(images/v2-rain.png);
+	background-repeat: repeat;
+	background-size: 150%;
+	background-position-y: -25px;
+	padding-bottom: 3rem;
+
+	#custom_html-13 {
+		.button {
+			display: inline-block;
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	.widget_rss {
+		margin-bottom: 0;
+
+		.widget-title {
+			display: none;
+		}
+
+		ul {
+
+			li {
+				border: 2px solid $color-border;
+				background-color: $white;
+				padding: 2rem;
+				margin-bottom: 1.5rem;
+			}
+		}
+	}
+}
+
+@include breakpoint-grid-layout {
+	#content-widget-4 {
+		background-image: url(images/v2-mug.png), url(images/v2-rain.png);
+		background-repeat: no-repeat, repeat;
+		background-size: 120px, 100%;
+		background-position-y: 20px, -25px;
+		background-position-x: 97%, 0;
+		padding-bottom: 3rem;
+		display: grid;
+		grid-template-columns: 33% 67%;
+		grid-template-rows: auto;
+		grid-template-areas:
+			"header header"
+			"posts posts"
+			"button menu";
+
+		.widget_text:first-of-type {
+			grid-area: header;
+		}
+
+		#custom_html-13 {
+			grid-area: button;
+			margin-right: 0;
+			margin-left: 0;
+
+			.button {
+				display: inline-block;
+				width: 100%;
+				text-align: center;
+			}
+		}
+
+		.widget_rss {
+			grid-area: posts;
+			margin-bottom: 0;
+		}
+
+		.widget_nav_menu {
+			/* todo this creates horizontal scrolling in firefox on mobile */
+
+			grid-area: menu;
+			margin-left: 0;
+			margin-right: 0;
+			padding-left: 1rem;
+		}
+	}
+}
+
+@include breakpoint-grid-layout-lg {
+	#content-widget-4 {
+		background-position-x: 90%, 0;
+
+		.widget_nav_menu {
+			margin-right: $calc_margin;
+			padding-left: 1rem;
+		}
+
+		#custom_html-13 {
+			margin-left: $calc_margin;
+		}
+	}
+}
+
+/* INFO JUST FOR YOU */
+#content-widget-3 {
+	background-color: $color-green-96;
+	padding: 2rem 1rem;
 }
 
 .info-column {
@@ -157,7 +359,7 @@
 	margin-right: -5px;
 
 	li {
-		flex-basis: 50%;
+		flex-basis: 100%;
 
 		&.list-item-wide {
 			flex-basis: 100%;
@@ -255,7 +457,15 @@
 	}
 }
 
+@include breakpoint-tablet-up {
+	.info-linklist {
+		li {
+			flex-basis: 50%;
+		}
+	}
+}
 
+/* override core settings */
 @media (min-width: 600px) {
 
 	.info-column.wp-block-column {

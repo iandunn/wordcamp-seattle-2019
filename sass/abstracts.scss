@@ -75,6 +75,22 @@ $font-size-h3: 2rem;
 	}
 }
 
+/* greater than max content width */
+@mixin breakpoint-grid-layout-lg() {
+	@supports (display: grid) {
+		@media screen and (min-width: 1020px) {
+			@content;
+		}
+	}
+}
+
+/* should have one breakpoint regardless of grid? */
+@mixin breakpoint-tablet-up() {
+	@media screen and (min-width: 500px) {
+		@content;
+	}
+}
+
 @mixin breakpoint-full-navigation() {
 	@media screen and (min-width: 37.5em) {
 		@content;
@@ -94,5 +110,6 @@ $font-size-h3: 2rem;
 @mixin alignfull() {
 	position: relative;
 	width: 100vw;
+	max-width: 100%;
 	left: 0;
 }
