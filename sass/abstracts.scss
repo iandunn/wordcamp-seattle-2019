@@ -59,7 +59,9 @@ $color-footer-background: $color-blue-19;
 
 /* FONTS */
 // TODO this is just an estimation
+$font-size-h1-xs: 3.5rem;
 $font-size-h1: 4rem;
+$font-size-h2-xs: 2.5rem;
 $font-size-h2: 3.125rem;
 $font-size-h3: 2rem;
 
@@ -84,9 +86,14 @@ $font-size-h3: 2rem;
 	}
 }
 
-/* should have one breakpoint regardless of grid? */
 @mixin breakpoint-tablet-up() {
 	@media screen and (min-width: 500px) {
+		@content;
+	}
+}
+
+@mixin breakpoint-desktop-up() {
+	@media screen and (min-width: 980px) {
 		@content;
 	}
 }

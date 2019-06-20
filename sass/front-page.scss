@@ -5,6 +5,9 @@ $calc_margin: calc((98vw - #{$content-max-width})/2); //use 98vw because vw incl
 }
 
 .content-widgets-block {
+	padding: 2rem 1rem;
+	width: 100%;
+
 	.widget {
 		max-width: $content-max-width;
 		/* todo should this be set on .site-content instead, so that all of the content is limited? */
@@ -94,7 +97,7 @@ $calc_margin: calc((98vw - #{$content-max-width})/2); //use 98vw because vw incl
 
 //SCHEDULE ETC
 #content-widget-1 {
-	padding: 4rem 1rem 2rem;
+	padding-top: 4rem;
 	background-image: url(images/v2-rain.png);
 	background-repeat: repeat;
 	background-size: 150%;
@@ -160,14 +163,14 @@ $calc_margin: calc((98vw - #{$content-max-width})/2); //use 98vw because vw incl
 
 		.widget_rss {
 			grid-area: sched;
-			margin-left: $calc_margin;
+			margin-left: 0;
 			margin-right: 1rem;
 		}
 
 		.widget_nav_menu {
 			grid-area: menu;
-			margin-left: $calc_margin;
-			margin-right: $calc_margin;
+			margin-left: 0;
+			margin-right: 0;
 		}
 	}
 
@@ -184,20 +187,62 @@ $calc_margin: calc((98vw - #{$content-max-width})/2); //use 98vw because vw incl
 	//top image
 	#media_image-3 {
 		grid-area: image_intro;
-		margin-left: $calc_margin;
+		margin-left: 0;
 	}
 
 	//bottom image
 	#media_image-5 {
 		grid-area: image_sched;
-		margin-right: $calc_margin;
+		margin-right: 0;
 	}
 
 	//what is wordcamp
 	#custom_html-20 {
 		grid-area: intro;
-		margin-right: $calc_margin;
+		margin-right: 0;
 		margin-left: 1rem;
+	}
+
+	//what is wc button
+	#custom_html-18 {
+		grid-area: button_intro;
+		margin-right: 0;
+		margin-left: 1rem;
+	}
+
+	//schedule button
+	#custom_html-16 {
+		grid-area: button_sched;
+		margin-left: 0;
+		margin-right: 1rem;
+	}
+}
+
+@include breakpoint-grid-layout-lg() {
+	#content-widget-1 {
+		.widget_rss {
+			margin-left: $calc_margin;
+		}
+
+		.widget_nav_menu {
+			margin-left: $calc_margin;
+			margin-right: $calc_margin;
+		}
+	}
+
+	//top image
+	#media_image-3 {
+		margin-left: $calc_margin;
+	}
+
+	//bottom image
+	#media_image-5 {
+		margin-right: $calc_margin;
+	}
+
+	//what is wordcamp
+	#custom_html-20 {
+		margin-right: $calc_margin;
 	}
 
 	//what is wc button
@@ -209,16 +254,12 @@ $calc_margin: calc((98vw - #{$content-max-width})/2); //use 98vw because vw incl
 
 	//schedule button
 	#custom_html-16 {
-		grid-area: button_sched;
 		margin-left: $calc_margin;
-		margin-right: 1rem;
 	}
 }
 
-
 //Fuel Your Business
 #content-widget-4 {
-	padding: 2rem 1rem;
 	background-image: url(images/v2-rain.png);
 	background-repeat: repeat;
 	background-size: 150%;
@@ -318,7 +359,6 @@ $calc_margin: calc((98vw - #{$content-max-width})/2); //use 98vw because vw incl
 /* INFO JUST FOR YOU */
 #content-widget-3 {
 	background-color: $color-green-96;
-	padding: 2rem 1rem;
 }
 
 .info-column {
@@ -477,6 +517,7 @@ $calc_margin: calc((98vw - #{$content-max-width})/2); //use 98vw because vw incl
 	}
 }
 
+/* override core settings */
 @media (min-width: 782px) {
 
 	.info-column.wp-block-column:not(:first-child) {
@@ -485,5 +526,14 @@ $calc_margin: calc((98vw - #{$content-max-width})/2); //use 98vw because vw incl
 
 	.info-column {
 		padding: 1rem 2rem;
+	}
+}
+
+@include breakpoint-tablet-up {
+	#content-widget-3 {
+		background-image: url(images/v2-campfire.png), url(images/v2-backpack.png);
+		background-repeat: no-repeat, no-repeat;
+		background-size: 250px, 250px;
+		background-position: bottom 25px right 25px, bottom 25px left 25px;
 	}
 }

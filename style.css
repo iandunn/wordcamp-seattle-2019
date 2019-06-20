@@ -7,7 +7,6 @@
  * Mixins
  */
 /* greater than max content width */
-/* should have one breakpoint regardless of grid? */
 /*
  * This is an alternative to Core's `.alignfull` class, but works very differently.
  *
@@ -377,13 +376,19 @@ h6 {
   line-height: 1.2; }
 
 h1 {
-  font-size: 4rem; }
+  font-size: 3.5rem; }
 
 h2 {
-  font-size: 3.125rem; }
+  font-size: 2.5rem; }
 
 h3 {
   font-size: 2rem; }
+
+@media screen and (min-width: 500px) {
+  h1 {
+    font-size: 4rem; }
+  h2 {
+    font-size: 3.125rem; } }
 
 .widget_blog_subscription {
   display: inline-block;
@@ -570,44 +575,44 @@ h3 {
 .widget-title {
   text-align: center; }
 
-.content-widgets-block .widget {
-  max-width: 980px;
-  /* todo should this be set on .site-content instead, so that all of the content is limited? */
-  margin-left: auto;
-  margin-right: auto; }
-
-.content-widgets-block .widget_nav_menu .menu {
-  list-style: none;
-  background-color: #f2fbef;
-  border: 1px solid #eff8ec;
-  margin: 0;
-  padding: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-
-.content-widgets-block .widget_nav_menu .menu-item {
-  padding-left: 10px;
-  padding-right: 10px; }
-  .content-widgets-block .widget_nav_menu .menu-item a {
-    color: #f05c33;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 0;
-    text-align: center;
-    display: block; }
-    .content-widgets-block .widget_nav_menu .menu-item a:hover {
-      text-decoration: underline; }
-
-.content-widgets-block .widget_nav_menu .menu-item:last-of-type {
-  border-right: none; }
+.content-widgets-block {
+  padding: 2rem 1rem;
+  width: 100%; }
+  .content-widgets-block .widget {
+    max-width: 980px;
+    /* todo should this be set on .site-content instead, so that all of the content is limited? */
+    margin-left: auto;
+    margin-right: auto; }
+  .content-widgets-block .widget_nav_menu .menu {
+    list-style: none;
+    background-color: #f2fbef;
+    border: 1px solid #eff8ec;
+    margin: 0;
+    padding: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .content-widgets-block .widget_nav_menu .menu-item {
+    padding-left: 10px;
+    padding-right: 10px; }
+    .content-widgets-block .widget_nav_menu .menu-item a {
+      color: #f05c33;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 0;
+      text-align: center;
+      display: block; }
+      .content-widgets-block .widget_nav_menu .menu-item a:hover {
+        text-decoration: underline; }
+  .content-widgets-block .widget_nav_menu .menu-item:last-of-type {
+    border-right: none; }
 
 .widget_rss ul {
   list-style: none;
@@ -637,7 +642,7 @@ h3 {
     border-right: none; } }
 
 #content-widget-1 {
-  padding: 4rem 1rem 2rem;
+  padding-top: 4rem;
   background-image: url(images/v2-rain.png);
   background-repeat: repeat;
   background-size: 150%;
@@ -681,12 +686,12 @@ h3 {
       grid-template-areas: "image_intro intro         intro" "image_intro button_intro  button_intro" "sched       sched         image_sched" "button_sched button_sched image_sched" "menu        menu          menu"; }
       #content-widget-1 .widget_rss {
         grid-area: sched;
-        margin-left: calc((98vw - 980px)/2);
+        margin-left: 0;
         margin-right: 1rem; }
       #content-widget-1 .widget_nav_menu {
         grid-area: menu;
-        margin-left: calc((98vw - 980px)/2);
-        margin-right: calc((98vw - 980px)/2); }
+        margin-left: 0;
+        margin-right: 0; }
     @supports ((-o-object-fit: cover) or (object-fit: cover)) {
       .widget_media_image img {
         -o-object-fit: cover;
@@ -695,25 +700,44 @@ h3 {
         width: 100%; } }
     #media_image-3 {
       grid-area: image_intro;
-      margin-left: calc((98vw - 980px)/2); }
+      margin-left: 0; }
     #media_image-5 {
       grid-area: image_sched;
-      margin-right: calc((98vw - 980px)/2); }
+      margin-right: 0; }
     #custom_html-20 {
       grid-area: intro;
-      margin-right: calc((98vw - 980px)/2);
+      margin-right: 0;
       margin-left: 1rem; }
+    #custom_html-18 {
+      grid-area: button_intro;
+      margin-right: 0;
+      margin-left: 1rem; }
+    #custom_html-16 {
+      grid-area: button_sched;
+      margin-left: 0;
+      margin-right: 1rem; } } }
+
+@supports (display: grid) {
+  @media screen and (min-width: 1020px) {
+    #content-widget-1 .widget_rss {
+      margin-left: calc((98vw - 980px)/2); }
+    #content-widget-1 .widget_nav_menu {
+      margin-left: calc((98vw - 980px)/2);
+      margin-right: calc((98vw - 980px)/2); }
+    #media_image-3 {
+      margin-left: calc((98vw - 980px)/2); }
+    #media_image-5 {
+      margin-right: calc((98vw - 980px)/2); }
+    #custom_html-20 {
+      margin-right: calc((98vw - 980px)/2); }
     #custom_html-18 {
       grid-area: button_intro;
       margin-right: calc((98vw - 980px)/2);
       margin-left: 1rem; }
     #custom_html-16 {
-      grid-area: button_sched;
-      margin-left: calc((98vw - 980px)/2);
-      margin-right: 1rem; } } }
+      margin-left: calc((98vw - 980px)/2); } } }
 
 #content-widget-4 {
-  padding: 2rem 1rem;
   background-image: url(images/v2-rain.png);
   background-repeat: repeat;
   background-size: 150%;
@@ -778,8 +802,7 @@ h3 {
 
 /* INFO JUST FOR YOU */
 #content-widget-3 {
-  background-color: #f2fbef;
-  padding: 2rem 1rem; }
+  background-color: #f2fbef; }
 
 .info-column {
   padding: 1rem; }
@@ -881,11 +904,19 @@ h3 {
   .info-column.wp-block-column:nth-child(2n) {
     margin-left: 16px; } }
 
+/* override core settings */
 @media (min-width: 782px) {
   .info-column.wp-block-column:not(:first-child) {
     margin-left: 16px; }
   .info-column {
     padding: 1rem 2rem; } }
+
+@media screen and (min-width: 500px) {
+  #content-widget-3 {
+    background-image: url(images/v2-campfire.png), url(images/v2-backpack.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 250px, 250px;
+    background-position: bottom 25px right 25px, bottom 25px left 25px; } }
 
 /*
  * Footer
