@@ -441,7 +441,7 @@ h3 {
     margin-top: 8px; } }
 
 #header-widgets {
-  max-width: 900px;
+  max-width: 980px;
   margin: 0 auto;
   padding: 0 80px; }
 
@@ -488,24 +488,34 @@ h3 {
     @media screen and (min-width: 700px) {
       #custom_html-8 {
         margin: 0; } } }
+  #custom_html-8 a {
+    color: #000;
+    text-decoration: none; }
 
 #custom_html-3 {
   margin-bottom: 0; }
 
 #header-widgets .headline {
   /* todo margins aren't even at 428px wide viewport. lots of room on left side, none on right side */
-  display: grid;
-  grid-template-columns: 80px auto;
-  grid-template-rows: auto auto auto;
-  grid-template-areas: "headline-logo headline" "sub-headline  sub-headline" "location      location";
-  text-align: left; }
+  text-align: center; }
+  @media screen and (min-width: 500px) {
+    #header-widgets .headline {
+      display: grid;
+      grid-template-columns: 80px auto;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "headline-logo headline" "sub-headline  sub-headline" "location      location";
+      text-align: left; } }
   #header-widgets .headline img {
-    grid-area: headline-logo;
-    width: 100px; }
+    width: 50%; }
+    @media screen and (min-width: 500px) {
+      #header-widgets .headline img {
+        grid-area: headline-logo;
+        width: 100px; } }
   #header-widgets .headline h3 {
     grid-area: headline;
     text-transform: uppercase;
-    padding: 8px 0 0 20px; }
+    padding: 8px 0 0 20px;
+    word-break: break-word; }
   #header-widgets .headline .sub-headline {
     grid-area: sub-headline;
     margin: 5px 0 0 0;
@@ -914,9 +924,47 @@ h3 {
 @media screen and (min-width: 500px) {
   #content-widget-3 {
     background-image: url(images/v2-campfire.png), url(images/v2-backpack.png);
+    /* todo maybe only add ^ on tablet or desktop, b/c can't really see it well on mobile */
     background-repeat: no-repeat, no-repeat;
     background-size: 250px, 250px;
     background-position: bottom 25px right 25px, bottom 25px left 25px; } }
+
+.wcb_widget_sponsors {
+  max-width: 980px;
+  margin: 0 auto 20px auto;
+  padding: 0 1rem;
+  /* todo maybe create an abstract w/ this max-width/margin combo, since seems like most sections use it to center themselves */ }
+
+.sponsor-level-title {
+  display: none; }
+
+.sponsor-level {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  /* todo this doesn't seem needed */ }
+
+.sponsor-logo {
+  border: 2px solid #e7e7e5;
+  margin: 0 5px 5px 0; }
+
+.wcb_widget_sponsors .sponsor-logo {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  /* todo doesn't look good when items on line by themselves b/c they're bigger than others
+		 * also doesn't match mockup b/c each box should be equal width
+		 *
+		 * maybe switch to Grid instead, but IIRC i tried that and had trouble w/ it too
+		 */
+  width: 200px;
+  max-width: 225px;
+  padding: 5px; }
 
 /*
  * Footer

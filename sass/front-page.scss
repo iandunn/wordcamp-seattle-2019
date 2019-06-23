@@ -532,8 +532,12 @@ $calc_margin: calc((98vw - #{$content-max-width})/2); //use 98vw because vw incl
 @include breakpoint-tablet-up {
 	#content-widget-3 {
 		background-image: url(images/v2-campfire.png), url(images/v2-backpack.png);
+			/* todo maybe only add ^ on tablet or desktop, b/c can't really see it well on mobile */
 		background-repeat: no-repeat, no-repeat;
 		background-size: 250px, 250px;
 		background-position: bottom 25px right 25px, bottom 25px left 25px;
 	}
 }
+
+// Sponsors
+@import "home-sponsors";

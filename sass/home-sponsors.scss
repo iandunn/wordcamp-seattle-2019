@@ -1,0 +1,33 @@
+.wcb_widget_sponsors {
+	max-width: $content-max-width;
+	margin: 0 auto 20px auto;
+	padding: 0 1rem;
+	/* todo maybe create an abstract w/ this max-width/margin combo, since seems like most sections use it to center themselves */
+}
+
+.sponsor-level-title {
+	display: none;
+}
+
+.sponsor-level {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;	/* todo this doesn't seem needed */
+}
+
+.sponsor-logo {
+	border: 2px solid #e7e7e5;
+	margin: 0 5px 5px 0;
+}
+
+.wcb_widget_sponsors .sponsor-logo {
+	flex-grow: 1;
+		/* todo doesn't look good when items on line by themselves b/c they're bigger than others
+		 * also doesn't match mockup b/c each box should be equal width
+		 *
+		 * maybe switch to Grid instead, but IIRC i tried that and had trouble w/ it too
+		 */
+	width: 200px;
+	max-width: 225px;
+	padding: 5px;
+}
