@@ -1,5 +1,7 @@
 This is a static version of the [WordCamp Seattle 2019](https://2019.seattle.wordcamp.org) site, to make it easy to collaborate on the content and custom CSS before the site is launched. This avoids having to share database dumps, or setup a shared remote staging site.
 
+If you're starting from scratch, the `Alternative Approach` described below might work better than the one described here.
+
 ### Development
 
 #### Setup this repo locally
