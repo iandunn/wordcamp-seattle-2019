@@ -25,7 +25,7 @@
 
 	background-color: #a9dada;
 	/* todo convert to var, along w/ any others. see issue #9 for naming convention. */
-	background-image: url('./images/mountain-cropped.svg');
+	background-image: url('https://2019.seattle.wordcamp.org/files/2019/06/mountain-cropped.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: bottom -5px center;
@@ -77,6 +77,10 @@
 	a {
 		color: $black;
 		text-decoration: none;
+	}
+
+	.admin-bar & {
+		top: 32px;
 	}
 }
 
@@ -137,7 +141,7 @@
 
 		height: 200px;
 		/* todo maybe match this with height of mountain image or something, so that mountain never overlaps text above */
-		background-image: url('./images/v2-tent.png');
+		background-image: url('https://2019.seattle.wordcamp.org/files/2019/06/v2-tent.png');
 		background-size: 70%;
 		/* todo this needs work */
 		background-repeat: no-repeat;
@@ -168,7 +172,8 @@
 	}
 }
 
-#header-widgets .jetpack_subscription_widget {
+#header-widgets .jetpack_subscription_widget,
+#header-widgets .widget_wcorg_mailchimp_wiget {
 	margin-top: 30px;
 }
 
@@ -191,7 +196,8 @@
 		grid-area: headline-container;
 	}
 
-	#header-widgets .jetpack_subscription_widget {
+	#header-widgets .jetpack_subscription_widget,
+	#header-widgets .widget_wcorg_mailchimp_wiget {
 		grid-area: subscribe;
 	}
 

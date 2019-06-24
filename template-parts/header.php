@@ -73,7 +73,7 @@
 				</div>
 			</section>
 
-			<section id="blog_subscription-3" class="widget widget_blog_subscription jetpack_subscription_widget">
+			<!-- <section id="blog_subscription-3" class="widget widget_blog_subscription jetpack_subscription_widget">
 				<h2 class="widget-title"></h2>
 				<form action="#" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-3">
 					<div id="subscribe-text">
@@ -101,7 +101,23 @@
 						</button>
 					</p>
 				</form>
-			</section>
+			</section> -->
+
+			<section id="wcorg_mailchimp_wiget-2" class="widget widget_wcorg_mailchimp_wiget"><h2 class="widget-title">Stay Updated</h2>		<style>
+				.widget_wcorg_mailchimp_wiget .wcorg-mailchimp label,
+				.widget_wcorg_mailchimp_wiget .wcorg-mailchimp input[type="submit"] {
+					display: block;
+					clear: both;
+				}
+				</style>
+					<form class="wcorg-mailchimp" action="https://wordcamp.us12.list-manage.com/subscribe/post?u=97d2eb7bf64303419f4b99d01&#038;id=87715af40b" method="post">
+				<label for="wcorg-mailchimp-name" class="wcorg-mailchimp-name">Name:</label>
+				<input type="text" name="NAME" id="wcorg-mailchimp-name" />
+				<label for="wcorg-mailchimp-email" class="wcorg-mailchimp-email">Email:</label>
+				<input type="text" name="EMAIL" id="wcorg-mailchimp-email" />
+				<input type="submit" value="Subscribe" />
+			</form>
+					</section>
 
 			<section id="custom_html-4" class="widget_text widget widget_custom_html">
 				<div class="textwidget custom-html-widget">

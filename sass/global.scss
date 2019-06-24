@@ -3,7 +3,8 @@ a {
 }
 
 button,
-a.button {
+a.button,
+input[type=submit] {
 	background-color: $color-orange-57;
 	border: 1px solid $color-orange-55;
 	border-radius: 0;
@@ -21,7 +22,7 @@ a.button {
 button.arrow::before,
 a.arrow::before {
 	content: "";
-	background-image: url(images/arrow-orange.png);
+	background-image: url(https://2019.seattle.wordcamp.org/files/2019/06/arrow-orange.png);
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -33,7 +34,7 @@ a.arrow::before {
 
 button.arrow.arrow-white::before,
 a.arrow.arrow-white::before {
-	background-image: url(images/arrow-white.png);
+	background-image: url(https://2019.seattle.wordcamp.org/files/2019/06/arrow-white.png);
 }
 
 button {
@@ -76,16 +77,32 @@ h3 {
 	}
 }
 
-.widget_blog_subscription {
+.widget_blog_subscription,
+.widget_wcorg_mailchimp_wiget {
 	display: inline-block;
 	width: 225px;
-	padding: 0 20px;
+	padding: 20px;
 	color: #454443;
-	background-color: #f3fbf0;
+	background-color: $color-green-96;
 	text-align: center;
 
 	input {
 		border: 1px solid #454443;
 		padding: 6px 10px 3px 10px;
+	}
+
+	input[type=submit] {
+		margin-top: 1rem;
+		border: 1px solid $color-orange-55;
+		padding: 10px 16px 6px;
+		font-size: 1rem;
+	}
+
+	label {
+		text-align: left;
+	}
+
+	.widget-title {
+		font-size: 1rem;
 	}
 }
