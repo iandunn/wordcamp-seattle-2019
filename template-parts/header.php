@@ -18,7 +18,7 @@
 			Primary Menu
 		</button>
 
-		<div class="menu-header-container">
+		<div class="menu-main-menu-container">
 			<ul id="primary-menu" class="menu">
 				<li id="menu-item-102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102">
 					<a href="https://2019.seattle.wordcamp.test/organizers/">Organizers</a></li>

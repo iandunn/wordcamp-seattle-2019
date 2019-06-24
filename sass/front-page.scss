@@ -1,5 +1,9 @@
 $calc_margin: calc((98vw - #{$content-max-width})/2); //use 98vw because vw includes scrollbars
 
+.home .entry-header {
+	display: none;
+}
+
 .widget-title {
 	text-align: center;
 }
@@ -206,7 +210,7 @@ $calc_margin: calc((98vw - #{$content-max-width})/2); //use 98vw because vw incl
 	}
 
 	//what is wc button
-	#custom_html-18 {
+	#custom_html-7 {
 		grid-area: button_intro;
 		margin-right: 0;
 		margin-left: 1rem;
@@ -248,7 +252,7 @@ $calc_margin: calc((98vw - #{$content-max-width})/2); //use 98vw because vw incl
 	}
 
 	//what is wc button
-	#custom_html-18 {
+	#custom_html-7 {
 		grid-area: button_intro;
 		margin-right: $calc_margin;
 		margin-left: 1rem;
@@ -300,8 +304,7 @@ $calc_margin: calc((98vw - #{$content-max-width})/2); //use 98vw because vw incl
 		background-image: url(https://2019.seattle.wordcamp.org/files/2019/06/v2-mug.png), url(https://2019.seattle.wordcamp.org/files/2019/06/v2-rain.png);
 		background-repeat: no-repeat, repeat;
 		background-size: 120px, 100%;
-		background-position-y: 20px, -25px;
-		background-position-x: 97%, 0;
+		background-position: 97% 20px, -25px 0;
 		padding-bottom: 3rem;
 		display: grid;
 		grid-template-columns: 33% 67%;
@@ -345,7 +348,7 @@ $calc_margin: calc((98vw - #{$content-max-width})/2); //use 98vw because vw incl
 
 @include breakpoint-grid-layout-lg {
 	#content-widget-4 {
-		background-position-x: 90%, 0;
+		background-position: 90% 20px, 0 0;
 
 		.widget_nav_menu {
 			margin-right: $calc_margin;

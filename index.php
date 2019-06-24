@@ -103,6 +103,7 @@ $content_template = $_GET['page'] ?? 'front-page';
 		.admin-bar {
 			position: inherit !important;
 			top: auto !important;
+			margin-top: 32px;
 		}
 
 		.admin-bar .goog-te-banner-frame {
@@ -152,7 +153,6 @@ $content_template = $_GET['page'] ?? 'front-page';
 			position: absolute;
 			clip: rect(1px, 1px, 1px, 1px);
 		}
-
 	</style>
 
 	<link rel="icon" href="https://2019.seattle.wordcamp.org/files/2019/05/cropped-cropped-WP-SpaceNeedle-logo-32x32.png" sizes="32x32" />

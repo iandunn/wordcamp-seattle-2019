@@ -572,7 +572,10 @@ h3 {
     .page-navigation-container li:last-child {
       border-right: none; }
   .page-navigation-container a {
-    color: #d96036; } }
+    color: #f1481e;
+    font-weight: 600; }
+    .page-navigation-container a:hover {
+      color: #b62e0c; } }
 
 #header-widgets .jetpack_subscription_widget,
 #header-widgets .widget_wcorg_mailchimp_wiget {
@@ -607,6 +610,9 @@ h3 {
 /*
  * Front page
  */
+.home .entry-header {
+  display: none; }
+
 .widget-title {
   text-align: center; }
 
@@ -743,7 +749,7 @@ h3 {
       grid-area: intro;
       margin-right: 0;
       margin-left: 1rem; }
-    #custom_html-18 {
+    #custom_html-7 {
       grid-area: button_intro;
       margin-right: 0;
       margin-left: 1rem; }
@@ -765,7 +771,7 @@ h3 {
       margin-right: calc((98vw - 980px)/2); }
     #custom_html-6 {
       margin-right: calc((98vw - 980px)/2); }
-    #custom_html-18 {
+    #custom_html-7 {
       grid-area: button_intro;
       margin-right: calc((98vw - 980px)/2);
       margin-left: 1rem; }
@@ -798,8 +804,7 @@ h3 {
       background-image: url(https://2019.seattle.wordcamp.org/files/2019/06/v2-mug.png), url(https://2019.seattle.wordcamp.org/files/2019/06/v2-rain.png);
       background-repeat: no-repeat, repeat;
       background-size: 120px, 100%;
-      background-position-y: 20px, -25px;
-      background-position-x: 97%, 0;
+      background-position: 97% 20px, -25px 0;
       padding-bottom: 3rem;
       display: grid;
       grid-template-columns: 33% 67%;
@@ -828,7 +833,7 @@ h3 {
 @supports (display: grid) {
   @media screen and (min-width: 1020px) {
     #content-widget-4 {
-      background-position-x: 90%, 0; }
+      background-position: 90% 20px, 0 0; }
       #content-widget-4 .widget_nav_menu {
         margin-right: calc((98vw - 980px)/2);
         padding-left: 1rem; }
@@ -1002,10 +1007,6 @@ h3 {
   .site-footer a {
     color: #fff;
     text-decoration: none; }
-  .site-footer a.button {
-    color: #fff; }
-    .site-footer a.button::before {
-      background-image: url(https://2019.seattle.wordcamp.org/files/2019/06/logo.png); }
 
 .site-footer h2 {
   font-size: 1rem; }

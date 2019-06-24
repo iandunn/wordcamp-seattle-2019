@@ -168,7 +168,12 @@
 	}
 
 	.page-navigation-container a {
-		color: #d96036;
+		color: $color-red-53;
+		font-weight: 600;
+
+		&:hover {
+			color: darken($color-red-53, 15%);
+		}
 	}
 }
 

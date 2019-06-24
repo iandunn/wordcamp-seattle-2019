@@ -3,7 +3,7 @@
 		<div id="footer-widgets">
 
 			<div id="footer-widget-1" class="footer-widgets-block">
-				<section id="nav_menu-4" class="widget widget_nav_menu">
+				<section id="nav_menu-2" class="widget widget_nav_menu">
 					<div class="menu-footer-container">
 						<ul id="menu-footer" class="menu">
 							<li id="menu-item-138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-138">
@@ -109,9 +109,9 @@
 
 				<section id="custom_html-10" class="widget_text widget widget_custom_html">
 					<div class="textwidget custom-html-widget">
-						<a href="/tickets" class="button arrow">Grab Tickets Now!</a>
+						<a href="/tickets" class="button arrow arrow-white">Grab Tickets Now!</a>
 
-						<a class="site-info-network button arrow" href="https://central.wordcamp.org/">WordCamp Central</a>
+						<a class="site-info-network button arrow arrow-white" href="https://central.wordcamp.org/">WordCamp Central</a>
 
 						<a class="site-info-generator" href="https://wordpress.org/" title="A Semantic Personal Publishing Platform" rel="generator"> Proudly powered by WordPress </a>
 					</div>

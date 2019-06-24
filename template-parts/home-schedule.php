@@ -13,11 +13,11 @@
 
 			</div></div></section>
 
-	<section id="custom_html-18" class="widget_text widget widget_custom_html">
-		<div class="textwidget custom-html-widget">
-			<a href="/about" class="button arrow arrow-white button-large">Learn More About WordCamp Seattle</a>
-		</div>
-		</section>
+			<section id="custom_html-7" class="widget_text widget widget_custom_html">
+				<div class="textwidget custom-html-widget">
+					<a href="/about" class="button arrow arrow-white button-large">Learn More About WordCamp Seattle</a>
+				</div>
+			</section>
 		<!-- another image here I think helps the layout feel more balanced-->
 		<section id="media_image-5" class="widget widget_media_image">
 			<img width="640" height="480" src="images/wordcamp_2018.jpg" class="image wp-image-33  attachment-large size-large" alt=""  />

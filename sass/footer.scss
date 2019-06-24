@@ -11,14 +11,6 @@ $footer-top-padding: 20px;
 		color: $white;
 		text-decoration: none;
 	}
-
-	a.button {
-		color: $white;
-
-		&::before {
-			background-image: url(https://2019.seattle.wordcamp.org/files/2019/06/logo.png);
-		}
-	}
 }
 
 .site-footer h2 {

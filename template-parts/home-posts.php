@@ -2,7 +2,7 @@
 
 <div id="content-widget-4" class="content-widgets-block">
 	<!-- HTML widget with editable title -->
-	<section id="custom_html-10" class="widget_text widget widget_custom_html">
+	<section id="custom_html-11" class="widget_text widget widget_custom_html">
 		<h2 class="widget-title">Fuel Your Business</h2>
 		<div class="textwidget custom-html-widget"></div>
 	</section>
