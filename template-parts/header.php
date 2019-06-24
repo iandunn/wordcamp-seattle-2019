@@ -41,7 +41,7 @@
 
 	<div id="header-widgets">
 		<div id="header-widget-1" class="header-widgets-block">
-			<section id="custom_html-8" class="widget_text widget widget_custom_html">
+			<section id="custom_html-2" class="widget_text widget widget_custom_html">
 				<a name="top" />
 
 				<div class="textwidget custom-html-widget">WordCamp Seattle

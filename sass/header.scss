@@ -1,7 +1,7 @@
 // start with simple design for mobile and old browsers
 // then use grid for bigger screens & modern browsers
 
-@mixin critical_info_banner_height( $property ) {
+@mixin critical_info_banner_height($property) {
 	#{$property}: 80px;
 
 	@media screen and (min-width: 380px) {
@@ -21,17 +21,19 @@
 
 
 .site-header {
-	@include critical-info-banner-height( 'padding-top' );
+	@include critical-info-banner-height('padding-top');
 
-	background-color: #a9dada;	/* todo convert to var, along w/ any others. see issue #9 for naming convention. */
-	background-image: url( './images/mountain-cropped.svg' );
+	background-color: #a9dada;
+	/* todo convert to var, along w/ any others. see issue #9 for naming convention. */
+	background-image: url('./images/mountain-cropped.svg');
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: bottom -5px center;
 	text-align: center;
 
 	@include breakpoint-grid-layout {
-		background-size: 100% auto;	/* todo this isn't perfect */
+		background-size: 100% auto;
+		/* todo this isn't perfect */
 	}
 }
 
@@ -52,18 +54,18 @@
 }
 
 #header-widget-1 {
-	@include critical-info-banner-height( 'margin-top' );
+	@include critical-info-banner-height('margin-top');
 	padding-top: 60px;
 }
 
 /* Yellow info banner */
-#custom_html-8 {
+#custom_html-2 {
 	@include alignfull();
 
 	position: absolute;
 	top: 0;
 	margin: 0;
-	@include critical-info-banner-height( 'height' );
+	@include critical-info-banner-height('height');
 	background-color: #e9c544;
 	text-align: center;
 	padding: 5px 10px;
@@ -133,9 +135,11 @@
 	@include breakpoint-grid-layout {
 		/* todo maybe have on mobile too, if not too hard */
 
-		height: 200px; /* todo maybe match this with height of mountain image or something, so that mountain never overlaps text above */
+		height: 200px;
+		/* todo maybe match this with height of mountain image or something, so that mountain never overlaps text above */
 		background-image: url('./images/v2-tent.png');
-		background-size: 70%; /* todo this needs work */
+		background-size: 70%;
+		/* todo this needs work */
 		background-repeat: no-repeat;
 		background-position: bottom left 15%;
 	}
