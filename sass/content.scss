@@ -4,7 +4,10 @@
 	clip: rect(1px, 1px, 1px, 1px);
 }
 
-.site-content {
-
-	//background-color: orange; // temp
+.site-main {
+	padding: 2rem 1rem;
+	width: 100%;
+	max-width: $content-max-width;
+	margin-left: auto;
+	margin-right: auto;
 }

@@ -11,7 +11,7 @@
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
 
-<!-- <article id="post-2" class="post-2 page type-page status-publish hentry">
+<article id="post-2" class="post-2 page type-page status-publish hentry">
 	<header class="entry-header">
 		<h1 class="entry-title">Front Page</h1></header>
 
@@ -23,7 +23,7 @@
 	<footer class="entry-footer">
 		<span class="edit-link"><a class="post-edit-link" href="https://2019.seattle.wordcamp.test/wp-admin/post.php?post=2&#038;action=edit">Edit <span class="screen-reader-text">"Sample Page"</span></a></span>
 	</footer>
-</article> -->
+</article>
 
 				</main>
 		</div>
