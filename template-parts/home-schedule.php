@@ -1,25 +1,18 @@
 <!-- This varies from the comp after talking to Ryan - we wanted to get some 'what is wordcamp?'' text in here and not include the sponsor logo section-->
 
 <div id="content-widget-1" class="content-widgets-block">
-	<section id="media_image-3" class="widget widget_media_image">
-		<img width="640" height="480" src="images/wordcamp_2018.jpg" class="image wp-image-33  attachment-large size-large" alt=""  />
-	</section>
-	<section id="custom_html-20" class="widget_text widget widget_custom_html">
-
-		<div class="textwidget custom-html-widget">
-			<!-- HTML CONTENT START -->
-			<div class="wordcamp-wrapper">
+<section id="media_image-3" class="widget widget_media_image"><img width="640" height="640" src="https://2019.seattle.wordcamp.org/files/2019/02/DryePOdX0AAabzH.jpg" class="image wp-image-185  attachment-full size-full" alt="WordCamp, Seattle 2018 Volunteers" style="max-width: 100%; height: auto;" srcset="https://2019.seattle.wordcamp.org/files/2019/02/DryePOdX0AAabzH.jpg 640w, https://2019.seattle.wordcamp.org/files/2019/02/DryePOdX0AAabzH-150x150.jpg 150w, https://2019.seattle.wordcamp.org/files/2019/02/DryePOdX0AAabzH-300x300.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></section>
+<section id="custom_html-6" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="wordcamp-wrapper">
 			<h2 class="widget-title">What is WordCamp?</h2>
 				<p>WordCamps are informal, community-organized events that focus on everything WordPress.</p>
 				<p>WordCamp Seattle brings together WordPress enthusiasts from around the Pacific Northwest for two days of education and networking. Whether you’re a developer, a designer, a consultant, an agency, a blogger, a publisher or end user, WordCamp has something for you.</p>
-				<!-- FULL TEXT FROM ROBERT - above was edited down some, thought we could put enough on the homepage and then link to the about page? -->
+			<!-- FULL TEXT FROM ROBERT - above was edited down some, thought we could put enough on the homepage and then link to the about page? -->
 				<!-- <p>WordCamp is a conference that focuses on everything WordPress.</p>
 				<p>WordCamps are informal, community-organized events put together by volunteer WordPress users like yourself. Everyone from casual users to core developers participates, shares ideas, and gets to know each other. ~ WordCamp Central</p>
 				<p>WordCamp Seattle brings together WordPress enthusiasts from around the Pacific Northwest for two days of education and networking. Whether you’re a developer, a designer, a consultant, an agency, a blogger, a publisher or end user, WordCamp has something for you. You&#8217;ll leave having learned a valuable skill, having reinforced what you know, and better connected.</p> -->
-			</div>
-		<!-- HTML CONTENT END -->
-		</div>
-	</section>
+
+			</div></div></section>
+
 	<section id="custom_html-18" class="widget_text widget widget_custom_html">
 		<div class="textwidget custom-html-widget">
 			<a href="/about" class="button arrow arrow-white button-large">Learn More About WordCamp Seattle</a>

@@ -678,7 +678,7 @@ h3 {
 
 #content-widget-1 {
   padding-top: 4rem;
-  background-image: url(images/v2-rain.png);
+  background-image: url(https://2019.seattle.wordcamp.org/files/2019/06/v2-rain.png);
   background-repeat: repeat;
   background-size: 150%;
   background-position-y: -25px;
@@ -727,19 +727,19 @@ h3 {
         grid-area: menu;
         margin-left: 0;
         margin-right: 0; }
-    @supports ((-o-object-fit: cover) or (object-fit: cover)) {
-      .widget_media_image img {
-        -o-object-fit: cover;
-           object-fit: cover;
-        height: 100%;
-        width: 100%; } }
+      @supports ((-o-object-fit: cover) or (object-fit: cover)) {
+        #content-widget-1 .widget_media_image img {
+          -o-object-fit: cover;
+             object-fit: cover;
+          height: 100% !important;
+          width: 100%; } }
     #media_image-3 {
       grid-area: image_intro;
       margin-left: 0; }
     #media_image-5 {
       grid-area: image_sched;
       margin-right: 0; }
-    #custom_html-20 {
+    #custom_html-6 {
       grid-area: intro;
       margin-right: 0;
       margin-left: 1rem; }
@@ -763,7 +763,7 @@ h3 {
       margin-left: calc((98vw - 980px)/2); }
     #media_image-5 {
       margin-right: calc((98vw - 980px)/2); }
-    #custom_html-20 {
+    #custom_html-6 {
       margin-right: calc((98vw - 980px)/2); }
     #custom_html-18 {
       grid-area: button_intro;
@@ -773,7 +773,7 @@ h3 {
       margin-left: calc((98vw - 980px)/2); } } }
 
 #content-widget-4 {
-  background-image: url(images/v2-rain.png);
+  background-image: url(https://2019.seattle.wordcamp.org/files/2019/06/v2-rain.png);
   background-repeat: repeat;
   background-size: 150%;
   background-position-y: -25px;
@@ -795,7 +795,7 @@ h3 {
 @supports (display: grid) {
   @media screen and (min-width: 700px) {
     #content-widget-4 {
-      background-image: url(images/v2-mug.png), url(images/v2-rain.png);
+      background-image: url(https://2019.seattle.wordcamp.org/files/2019/06/v2-mug.png), url(https://2019.seattle.wordcamp.org/files/2019/06/v2-rain.png);
       background-repeat: no-repeat, repeat;
       background-size: 120px, 100%;
       background-position-y: 20px, -25px;
@@ -948,7 +948,7 @@ h3 {
 
 @media screen and (min-width: 500px) {
   #content-widget-3 {
-    background-image: url(images/v2-campfire.png), url(images/v2-backpack.png);
+    background-image: url(https://2019.seattle.wordcamp.org/files/2019/06/v2-campfire.png), url(https://2019.seattle.wordcamp.org/files/2019/06/v2-backpack.png);
     /* todo maybe only add ^ on tablet or desktop, b/c can't really see it well on mobile */
     background-repeat: no-repeat, no-repeat;
     background-size: 250px, 250px;

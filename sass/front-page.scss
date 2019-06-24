@@ -98,7 +98,7 @@ $calc_margin: calc((98vw - #{$content-max-width})/2); //use 98vw because vw incl
 //SCHEDULE ETC
 #content-widget-1 {
 	padding-top: 4rem;
-	background-image: url(images/v2-rain.png);
+	background-image: url(https://2019.seattle.wordcamp.org/files/2019/06/v2-rain.png);
 	background-repeat: repeat;
 	background-size: 150%;
 	background-position-y: -25px;
@@ -172,16 +172,18 @@ $calc_margin: calc((98vw - #{$content-max-width})/2); //use 98vw because vw incl
 			margin-left: 0;
 			margin-right: 0;
 		}
-	}
 
-	.widget_media_image {
-		@supports (object-fit: cover) {
-			img {
-				object-fit: cover;
-				height: 100%;
-				width: 100%;
+
+		.widget_media_image {
+			@supports (object-fit: cover) {
+				img {
+					object-fit: cover;
+					height: 100% !important;
+					width: 100%;
+				}
 			}
 		}
+
 	}
 
 	//top image
@@ -197,7 +199,7 @@ $calc_margin: calc((98vw - #{$content-max-width})/2); //use 98vw because vw incl
 	}
 
 	//what is wordcamp
-	#custom_html-20 {
+	#custom_html-6 {
 		grid-area: intro;
 		margin-right: 0;
 		margin-left: 1rem;
@@ -241,7 +243,7 @@ $calc_margin: calc((98vw - #{$content-max-width})/2); //use 98vw because vw incl
 	}
 
 	//what is wordcamp
-	#custom_html-20 {
+	#custom_html-6 {
 		margin-right: $calc_margin;
 	}
 
@@ -260,7 +262,7 @@ $calc_margin: calc((98vw - #{$content-max-width})/2); //use 98vw because vw incl
 
 //Fuel Your Business
 #content-widget-4 {
-	background-image: url(images/v2-rain.png);
+	background-image: url(https://2019.seattle.wordcamp.org/files/2019/06/v2-rain.png);
 	background-repeat: repeat;
 	background-size: 150%;
 	background-position-y: -25px;
@@ -295,7 +297,7 @@ $calc_margin: calc((98vw - #{$content-max-width})/2); //use 98vw because vw incl
 
 @include breakpoint-grid-layout {
 	#content-widget-4 {
-		background-image: url(images/v2-mug.png), url(images/v2-rain.png);
+		background-image: url(https://2019.seattle.wordcamp.org/files/2019/06/v2-mug.png), url(https://2019.seattle.wordcamp.org/files/2019/06/v2-rain.png);
 		background-repeat: no-repeat, repeat;
 		background-size: 120px, 100%;
 		background-position-y: 20px, -25px;
@@ -531,8 +533,8 @@ $calc_margin: calc((98vw - #{$content-max-width})/2); //use 98vw because vw incl
 
 @include breakpoint-tablet-up {
 	#content-widget-3 {
-		background-image: url(images/v2-campfire.png), url(images/v2-backpack.png);
-			/* todo maybe only add ^ on tablet or desktop, b/c can't really see it well on mobile */
+		background-image: url(https://2019.seattle.wordcamp.org/files/2019/06/v2-campfire.png), url(https://2019.seattle.wordcamp.org/files/2019/06/v2-backpack.png);
+		/* todo maybe only add ^ on tablet or desktop, b/c can't really see it well on mobile */
 		background-repeat: no-repeat, no-repeat;
 		background-size: 250px, 250px;
 		background-position: bottom 25px right 25px, bottom 25px left 25px;
