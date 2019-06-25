@@ -1103,5 +1103,5 @@ footer .widget_blog_subscription {
     background-position: center center; }
 
 .site-info {
-  display: none;
-  /* This content is placed in a footer widget instead for styling purposes. */ }
+  /* This content is placed in a footer widget instead for styling purposes. */
+  display: none; }
