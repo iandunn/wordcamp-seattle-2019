@@ -50,12 +50,20 @@
 #header-widgets {
 	max-width: $content-max-width;
 	margin: 0 auto;
-	padding: 0 80px;
+	padding: 0 16px;
+
+	@include breakpoint-tablet-up {
+		padding: 0 80px;
+	}
 }
 
 #header-widget-1 {
 	@include critical-info-banner-height('margin-top');
-	padding-top: 60px;
+	padding-top: 20px;
+
+	@include breakpoint-tablet-up {
+		padding-top: 60px;
+	}
 }
 
 /* Yellow info banner */
@@ -119,6 +127,17 @@
 		text-transform: uppercase;
 		padding: 8px 0 0 20px;
 		word-break: break-word;
+		color: $color-purple-36;
+
+		@include breakpoint-tablet-up {
+			span {
+				display: block;
+			}
+		}
+
+		@include breakpoint-tablet-up {
+			font-size: 2.5rem;
+		}
 	}
 
 	.sub-headline {
@@ -149,30 +168,101 @@
 	}
 }
 
+.page-navigation-container.toggled-on ul {
+	display: flex;
+}
+
+.page-navigation-container ul {
+	flex-direction: column;
+	background-color: #fff;
+
+	li {
+		position: relative;
+
+		a {
+			color: $color-red-53;
+			font-weight: bold;
+			padding: 0.5rem 1rem;
+			border-bottom: 1px solid $color-green-95;
+		}
+
+		//not dealing with toggling sub-navs for now can re-visit later
+		.dropdown-toggle {
+			display: none;
+		}
+	}
+
+	//submenus
+	ul {
+		position: relative;
+		box-shadow: none;
+		float: none;
+		top: 0;
+		left: 0;
+
+		a {
+			width: 100%;
+			font-weight: normal;
+		}
+	}
+}
 
 /* todo abstract button styles since many are shared across header/front-page/footer */
 @include breakpoint-full-navigation {
 	.page-navigation-container ul {
 		display: flex;
+		flex-direction: row;
 		justify-content: center;
-	}
+		background-color: transparent;
 
-	.page-navigation-container li {
-		margin: 0;
-		padding: 0 15px;
-		border-right: 1px solid #d1d2d4;
+		li {
+			margin: 0;
+			padding: 0 15px;
+			border-right: 1px solid #d1d2d4;
 
-		&:last-child {
-			border-right: none;
+
+			&:last-child {
+				border-right: none;
+			}
+
+			a {
+				border-bottom: none;
+				color: $color-red-53;
+				font-weight: 600;
+				padding: 0;
+
+				&:hover {
+					color: darken($color-red-53, 15%);
+				}
+			}
 		}
-	}
 
-	.page-navigation-container a {
-		color: $color-red-53;
-		font-weight: 600;
+		//submenus
+		ul {
+			background-color: #fff;
+			border: 1px solid $color-green-95;
+			flex-direction: column;
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 1.5em;
+			left: -999em;
+			z-index: 99999;
+			width: 225px;
 
-		&:hover {
-			color: darken($color-red-53, 15%);
+			li {
+				border-right: none;
+				padding: 0;
+
+				a {
+					padding: 0.5rem 1rem;
+
+					&:hover {
+						background-color: $color-green-95;
+					}
+				}
+
+			}
 		}
 	}
 }

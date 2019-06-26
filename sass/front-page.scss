@@ -312,7 +312,7 @@ $calc_margin: calc((98vw - #{$content-max-width})/2); //use 98vw because vw incl
 		grid-template-areas:
 			"header header"
 			"posts posts"
-			"button menu";
+			"button button";
 
 		.widget_text:first-of-type {
 			grid-area: header;

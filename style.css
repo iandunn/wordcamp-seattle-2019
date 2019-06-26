@@ -395,15 +395,17 @@ h3 {
 .widget_blog_subscription,
 .widget_wcorg_mailchimp_wiget {
   display: inline-block;
-  width: 225px;
+  width: 100%;
   padding: 20px;
   color: #454443;
   background-color: #f2fbef;
   text-align: center; }
   .widget_blog_subscription input,
   .widget_wcorg_mailchimp_wiget input {
-    border: 1px solid #454443;
-    padding: 6px 10px 3px 10px; }
+    padding: 6px 10px 3px 10px;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    border-radius: 0; }
   .widget_blog_subscription input[type=submit],
   .widget_wcorg_mailchimp_wiget input[type=submit] {
     margin-top: 1rem;
@@ -412,7 +414,9 @@ h3 {
     font-size: 1rem; }
   .widget_blog_subscription label,
   .widget_wcorg_mailchimp_wiget label {
-    text-align: left; }
+    text-align: left;
+    font-size: 0.8rem;
+    color: #454443; }
   .widget_blog_subscription .widget-title,
   .widget_wcorg_mailchimp_wiget .widget-title {
     font-size: 1rem; }
@@ -459,7 +463,10 @@ h3 {
 #header-widgets {
   max-width: 980px;
   margin: 0 auto;
-  padding: 0 80px; }
+  padding: 0 16px; }
+  @media screen and (min-width: 500px) {
+    #header-widgets {
+      padding: 0 80px; } }
 
 #header-widget-1 {
   margin-top: 80px;
@@ -467,7 +474,7 @@ h3 {
 	should be able to have absolutely positied image have auto height, but would still need to push menu down a fixed amount
 	could just have extra space between menu and this though
 	*/
-  padding-top: 60px; }
+  padding-top: 20px; }
   @media screen and (min-width: 380px) {
     #header-widget-1 {
       margin-top: 55px; } }
@@ -475,6 +482,9 @@ h3 {
     @media screen and (min-width: 700px) {
       #header-widget-1 {
         margin-top: 30px; } } }
+  @media screen and (min-width: 500px) {
+    #header-widget-1 {
+      padding-top: 60px; } }
 
 /* Yellow info banner */
 #custom_html-2 {
@@ -533,7 +543,14 @@ h3 {
     grid-area: headline;
     text-transform: uppercase;
     padding: 8px 0 0 20px;
-    word-break: break-word; }
+    word-break: break-word;
+    color: #514c6b; }
+    @media screen and (min-width: 500px) {
+      #header-widgets .headline h3 span {
+        display: block; } }
+    @media screen and (min-width: 500px) {
+      #header-widgets .headline h3 {
+        font-size: 2.5rem; } }
   #header-widgets .headline .sub-headline {
     grid-area: sub-headline;
     margin: 5px 0 0 0;
@@ -556,26 +573,86 @@ h3 {
       background-repeat: no-repeat;
       background-position: bottom left 15%; } } }
 
+.page-navigation-container.toggled-on ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.page-navigation-container ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff; }
+  .page-navigation-container ul li {
+    position: relative; }
+    .page-navigation-container ul li a {
+      color: #f1481e;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-bottom: 1px solid #eff8ec; }
+    .page-navigation-container ul li .dropdown-toggle {
+      display: none; }
+  .page-navigation-container ul ul {
+    position: relative;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    float: none;
+    top: 0;
+    left: 0; }
+    .page-navigation-container ul ul a {
+      width: 100%;
+      font-weight: normal; }
+
 /* todo abstract button styles since many are shared across header/front-page/footer */
 @media screen and (min-width: 37.5em) {
   .page-navigation-container ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center; }
-  .page-navigation-container li {
-    margin: 0;
-    padding: 0 15px;
-    border-right: 1px solid #d1d2d4; }
-    .page-navigation-container li:last-child {
-      border-right: none; }
-  .page-navigation-container a {
-    color: #f1481e;
-    font-weight: 600; }
-    .page-navigation-container a:hover {
-      color: #b62e0c; } }
+            justify-content: center;
+    background-color: transparent; }
+    .page-navigation-container ul li {
+      margin: 0;
+      padding: 0 15px;
+      border-right: 1px solid #d1d2d4; }
+      .page-navigation-container ul li:last-child {
+        border-right: none; }
+      .page-navigation-container ul li a {
+        border-bottom: none;
+        color: #f1481e;
+        font-weight: 600;
+        padding: 0; }
+        .page-navigation-container ul li a:hover {
+          color: #b62e0c; }
+    .page-navigation-container ul ul {
+      background-color: #fff;
+      border: 1px solid #eff8ec;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+              box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      float: left;
+      position: absolute;
+      top: 1.5em;
+      left: -999em;
+      z-index: 99999;
+      width: 225px; }
+      .page-navigation-container ul ul li {
+        border-right: none;
+        padding: 0; }
+        .page-navigation-container ul ul li a {
+          padding: 0.5rem 1rem; }
+          .page-navigation-container ul ul li a:hover {
+            background-color: #eff8ec; } }
 
 #header-widgets .jetpack_subscription_widget,
 #header-widgets .widget_wcorg_mailchimp_wiget {
@@ -816,7 +893,7 @@ h3 {
       display: grid;
       grid-template-columns: 33% 67%;
       grid-template-rows: auto;
-      grid-template-areas: "header header" "posts posts" "button menu"; }
+      grid-template-areas: "header header" "posts posts" "button button"; }
       #content-widget-4 .widget_text:first-of-type {
         grid-area: header; }
       #content-widget-4 #custom_html-13 {

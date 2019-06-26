@@ -34,7 +34,7 @@
 		</div>
 	</section>
 	<!-- NAVIGATION WIDGET -->
-	<section id="nav_menu-4" class="widget widget_nav_menu">
+	<!-- <section id="nav_menu-4" class="widget widget_nav_menu">
 		<div class="menu-where-to-stay-container">
 			<ul id="menu-where-to-stay" class="menu">
 				<li id="menu-item-49" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49"><a href="http://#">Where to Stay</a></li>
@@ -43,5 +43,5 @@
 				<li id="menu-item-52" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-52"><a href="http://#">Where to Eat</a></li>
 			</ul>
 		</div>
-	</section>
+	</section> -->
 </div>
