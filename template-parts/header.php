@@ -55,7 +55,9 @@
 				<div class="textwidget custom-html-widget">
 					<div class="headline">
 
-						<img src="images/logo.png" alt="" />
+						<a class="logo" href="/">
+							<img src="images/logo.png" alt="" />
+						</a>
 
 						<h3><span class="headline-top">Explore the</span> Possibilities</h3>
 

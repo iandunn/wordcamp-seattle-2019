@@ -113,7 +113,7 @@
 		text-align: left;
 	}
 
-	img {
+	.logo {
 		width: 50%;
 
 		@include breakpoint-tablet-up {
@@ -125,11 +125,12 @@
 	h3 {
 		grid-area: headline;
 		text-transform: uppercase;
-		padding: 8px 0 0 20px;
 		word-break: break-word;
 		color: $color-purple-36;
 
 		@include breakpoint-tablet-up {
+			padding: 8px 0 0 30px;
+
 			span {
 				display: block;
 			}
