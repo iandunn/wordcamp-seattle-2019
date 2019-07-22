@@ -772,6 +772,9 @@ h1.entry-title {
 .hfeed .post {
   margin-bottom: 2.5rem; }
 
+.hfeed .entry-footer {
+  padding-top: 0; }
+
 /*
  * Front page
  */
