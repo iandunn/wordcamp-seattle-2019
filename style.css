@@ -336,11 +336,12 @@ input[type=submit] {
   background-color: #f05c33;
   border: 1px solid #ed4f2c;
   border-radius: 0;
-  padding: 10px 16px 6px;
+  padding: 10px 16px 10px;
   display: inline-block;
   font-weight: 500;
   color: #fff;
-  text-decoration: none; }
+  text-decoration: none;
+  font-size: 1rem; }
   button:hover,
   a.button:hover,
   input[type=submit]:hover {
@@ -676,6 +677,30 @@ h3 {
       grid-area: subscribe; }
     #custom_html-4 {
       grid-area: grab-tickets; } } }
+
+/*
+ * Content that applies to all posts/pages
+ */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  padding: 8px; }
 
 /*
  * Content that applies to all posts/pages
@@ -1165,6 +1190,39 @@ h3 {
 
 .jetpack_widget_social_icons a {
   color: #fff; }
+
+.site-footer .search-form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .site-footer .search-form label {
+    padding-right: 10px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+  .site-footer .search-form .search-field {
+    width: 100%; }
+  @media screen and (min-width: 500px) {
+    .site-footer .search-form {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .site-footer .search-form label {
+        padding-right: 0;
+        padding-bottom: 0.5rem; }
+      .site-footer .search-form .search-submit {
+        max-width: 50%; } }
+  @media screen and (min-width: 980px) {
+    .site-footer .search-form {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; }
+      .site-footer .search-form label {
+        padding-right: 10px;
+        padding-bottom: 0; } }
 
 /*
  * Column 2 (Subscribe, links)

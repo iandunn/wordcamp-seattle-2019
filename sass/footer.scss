@@ -72,6 +72,43 @@ $footer-top-padding: 20px;
 	}
 }
 
+.site-footer .search-form {
+	width: 100%;
+	display: flex;
+
+	label {
+		padding-right: 10px;
+		flex-grow: 1;
+	}
+
+	.search-field {
+		width: 100%;
+	}
+
+	@include breakpoint-tablet-up {
+		flex-direction: column;
+
+		label {
+			padding-right: 0;
+			padding-bottom: 0.5rem;
+		}
+
+		.search-submit {
+			max-width: 50%;
+		}
+	}
+
+	@include breakpoint-desktop-up {
+		flex-direction: row;
+
+		label {
+			padding-right: 10px;
+			padding-bottom: 0;
+		}
+
+	}
+}
+
 /*
  * Column 2 (Subscribe, links)
  */

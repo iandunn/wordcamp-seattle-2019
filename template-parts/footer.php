@@ -74,6 +74,13 @@
 					</ul>
 
 				</section>
+				<section id="search-3" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://2019.seattle.wordcamp.org/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form></section>
 			</div>
 
 			<div id="footer-widget-2" class="footer-widgets-block">
