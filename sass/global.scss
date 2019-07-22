@@ -1,10 +1,23 @@
 a {
 	transition: all 0.3s ease;
+	color: $color-red-53;
+	text-decoration: none;
+
+	&:hover,
+	&:active {
+		color: $color-red-53;
+		text-decoration: underline;
+	}
+
+	&:visited {
+		color: $color-red-53;
+	}
 }
 
 button,
 a.button,
-input[type=submit] {
+input[type=submit],
+.wp-block-button__link {
 	background-color: $color-orange-57;
 	border: 1px solid $color-orange-55;
 	border-radius: 0;
@@ -21,7 +34,8 @@ input[type=submit] {
 }
 
 button.arrow::before,
-a.arrow::before {
+a.arrow::before,
+.wp-block-button__link::before {
 	content: "";
 	background-image: url(https://2019.seattle.wordcamp.org/files/2019/06/arrow-orange.png);
 	background-size: 100%;
@@ -34,7 +48,8 @@ a.arrow::before {
 }
 
 button.arrow.arrow-white::before,
-a.arrow.arrow-white::before {
+a.arrow.arrow-white::before,
+.wp-block-button__link::before {
 	background-image: url(https://2019.seattle.wordcamp.org/files/2019/06/arrow-white.png);
 }
 
