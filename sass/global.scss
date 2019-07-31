@@ -93,6 +93,12 @@ h3 {
 	}
 }
 
+ol,
+ul {
+	margin-left: 0;
+	padding-left: 1.25em;
+}
+
 .widget_blog_subscription,
 .widget_wcorg_mailchimp_wiget {
 	display: inline-block;

@@ -404,6 +404,11 @@ h3 {
   h2 {
     font-size: 2.5rem; } }
 
+ol,
+ul {
+  margin-left: 0;
+  padding-left: 1.25em; }
+
 .widget_blog_subscription,
 .widget_wcorg_mailchimp_wiget {
   display: inline-block;
@@ -1167,6 +1172,15 @@ h1.entry-title {
 /*
  * Other pages
  */
+/*
+ * All posts
+ */
+.post {
+  background-color: #f2fbef;
+  padding: 2em; }
+  .post .entry-footer {
+    border: none; }
+
 /*
  * Tickets
  */

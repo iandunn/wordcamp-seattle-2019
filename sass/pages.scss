@@ -1,4 +1,17 @@
 /*
+ * All posts
+ */
+.post {
+	background-color: $color-green-96;
+	padding: 2em;
+
+	.entry-footer {
+		border: none;
+	}
+}
+
+
+/*
  * Tickets
  */
 
