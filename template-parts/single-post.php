@@ -98,9 +98,9 @@
 		<span class="cat-links">Posted in <a href="https://2019.seattle.wordcamp.org/category/announcements/">Announcements</a></span><span class="edit-link"><a class="post-edit-link" href="https://2019.seattle.wordcamp.org/wp-admin/post.php?post=17387&amp;action=edit">Edit <span class="screen-reader-text">"Call for Speakers"</span></a></span>	</footer>
 </article>
 
-	<nav class="navigation post-navigation" role="navigation">
+<nav class="navigation post-navigation" role="navigation">
 		<h2 class="screen-reader-text">Post navigation</h2>
-		<div class="nav-links"><div class="nav-previous"><a href="https://2019.seattle.wordcamp.org/2019/04/30/call-for-sponsors/" rel="prev">Call for Sponsors</a></div></div>
+		<div class="nav-links"><div class="nav-previous"><a href="https://2019.seattle.wordcamp.org/2019/01/04/welcome-to-wordcamp-seattle-wa-usa/" rel="prev">SAVE THE DATE: WordCamp Seattle: November 9th – 10th, 2019!</a></div><div class="nav-next"><a href="https://2019.seattle.wordcamp.org/2019/04/30/call-for-sponsors/" rel="next">Call for Sponsors</a></div></div>
 	</nav>
 <div id="comments" class="comments-area">
 
