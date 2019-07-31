@@ -99,6 +99,25 @@ ul {
 	padding-left: 1.25em;
 }
 
+ol.ol-h3 {
+	list-style: none;
+	list-style: none;
+	counter-reset: li;
+	padding-left: 2em;
+
+	li {
+		padding-left: 1.25em;
+	}
+
+	li h3:before {
+		content: counter(li) ". ";
+		counter-increment: li;
+		font-size: $font-size-h3;
+		font-weight: bold;
+		margin-left: -1.25em;
+	}
+}
+
 .widget_blog_subscription,
 .widget_wcorg_mailchimp_wiget {
 	display: inline-block;

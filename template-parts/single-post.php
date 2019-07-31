@@ -1,3 +1,8 @@
+<style type="text/css">
+		.home .entry-header {
+			display: block;
+		}
+</style>
 <main id="main" class="site-main" role="main">
 
 <article id="post-17387" class="post-17387 post type-post status-publish format-standard has-post-thumbnail hentry category-announcements">

@@ -409,6 +409,20 @@ ul {
   margin-left: 0;
   padding-left: 1.25em; }
 
+ol.ol-h3 {
+  list-style: none;
+  list-style: none;
+  counter-reset: li;
+  padding-left: 2em; }
+  ol.ol-h3 li {
+    padding-left: 1.25em; }
+  ol.ol-h3 li h3:before {
+    content: counter(li) ". ";
+    counter-increment: li;
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-left: -1.25em; }
+
 .widget_blog_subscription,
 .widget_wcorg_mailchimp_wiget {
   display: inline-block;
@@ -775,7 +789,7 @@ h1.entry-title {
     font-size: 0.875rem; } }
 
 .hfeed .post {
-  margin-bottom: 2.5rem; }
+  margin-bottom: 3.5rem; }
 
 .hfeed .entry-footer {
   padding-top: 0; }
@@ -1198,14 +1212,14 @@ h1.entry-title {
 /*
  * Attendees
  */
-@media screen and (max-width: 500px) {
-  #tix-attendees .tix-columns-3 li {
-    width: 100%;
-    float: none; } }
-
 @media screen and (max-width: 800px) {
   #tix-attendees .tix-columns-3 li {
     width: 50% !important; } }
+
+@media screen and (max-width: 500px) {
+  #tix-attendees .tix-columns-3 li {
+    width: 100% !important;
+    float: none; } }
 
 /*
  * Footer

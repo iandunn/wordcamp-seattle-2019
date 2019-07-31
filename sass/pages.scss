@@ -33,15 +33,17 @@
 /*
  * Attendees
  */
-@media screen and (max-width: 500px) {
-	#tix-attendees .tix-columns-3 li {
-		width: 100%;
-		float: none;
-	}
-}
+
 
 @media screen and (max-width: 800px) {
 	#tix-attendees .tix-columns-3 li {
 		width: 50% !important;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#tix-attendees .tix-columns-3 li {
+		width: 100% !important;
+		float: none;
 	}
 }

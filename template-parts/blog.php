@@ -1,3 +1,8 @@
+<style type="text/css">
+		.home .entry-header {
+			display: block;
+		}
+</style>
 <main id="main" class="site-main" role="main">
 
 								<header>
