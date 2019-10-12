@@ -1221,6 +1221,62 @@ h1.entry-title {
     width: 100% !important;
     float: none; } }
 
+h2.schedule-header {
+  color: #514c6b;
+  text-transform: uppercase;
+  font-size: 1.5rem; }
+
+.wcpt-schedule {
+  border-bottom: 3px solid #d5ece9; }
+
+.wcpt-schedule th {
+  border-bottom: 3px solid #d5ece9;
+  padding: 10px;
+  vertical-align: top; }
+
+.wcpt-schedule td {
+  border-bottom: 1px solid #d5ece9;
+  padding: 10px;
+  vertical-align: top; }
+
+.wcpt-session-type-custom {
+  text-align: center;
+  background-color: #f2fbef;
+  color: #437b9d;
+  text-transform: uppercase; }
+
+.wcb-session-category-keynote-talk {
+  font-size: 115%;
+  text-align: center;
+  color: #fff;
+  background-color: #514c6b; }
+  .wcb-session-category-keynote-talk a {
+    color: #fff; }
+  .wcb-session-category-keynote-talk .wcpt-session-speakers::before {
+    color: #fff; }
+
+td.wcb-session-category-workshop {
+  border-bottom: none;
+  background-color: #ebebeb; }
+
+td.wcb-session-category-workshop-spacer {
+  background-color: #ebebeb; }
+  td.wcb-session-category-workshop-spacer .wcb-session-cell-content {
+    display: none; }
+
+.wcpt-session-speakers {
+  display: block;
+  font-style: italic; }
+
+.wcb-favourite-session {
+  background-color: #b3eaea; }
+
+@media screen and (max-width: 700px) {
+  .wcpt-schedule tr {
+    border-color: #d5ece9; }
+  .wcpt-schedule td.wcb-session-category-workshop-spacer {
+    display: none; } }
+
 /*
  * Footer
  */

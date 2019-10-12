@@ -25,7 +25,7 @@
 				<li id="menu-item-103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-103">
 					<a href="https://2019.seattle.wordcamp.test/location/">Location</a></li>
 				<li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-106">
-					<a href="https://2019.seattle.wordcamp.test/schedule/">Schedule</a>
+					<a href="?page=schedule">Schedule</a>
 					<ul class="sub-menu">
 						<li id="menu-item-104" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104">
 							<a href="https://2019.seattle.wordcamp.test/sessions/">Sessions</a></li>

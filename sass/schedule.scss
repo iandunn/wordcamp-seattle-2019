@@ -1,0 +1,80 @@
+h2.schedule-header {
+	color: $color-purple-36;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+}
+
+.wcpt-schedule {
+	border-bottom: 3px solid $color-border;
+}
+
+.wcpt-schedule th {
+	border-bottom: 3px solid $color-border;
+	padding: 10px;
+	vertical-align: top;
+}
+
+.wcpt-schedule td {
+	border-bottom: 1px solid $color-border;
+	padding: 10px;
+	vertical-align: top;
+}
+
+.wcpt-session-type-custom {
+	text-align: center;
+	background-color: $color-green-96;
+	color: $color-blue-44;
+	text-transform: uppercase;
+}
+
+.wcb-session-category-keynote-talk {
+	font-size: 115%;
+	text-align: center;
+	color: #fff;
+	background-color: $color-purple-36;
+
+	a {
+		color: #fff;
+	}
+
+	.wcpt-session-speakers {
+
+		&::before {
+			color: #fff;
+		}
+	}
+}
+
+td.wcb-session-category-workshop {
+	border-bottom: none;
+	background-color: #ebebeb;
+}
+
+td.wcb-session-category-workshop-spacer {
+	background-color: #ebebeb;
+
+	.wcb-session-cell-content {
+		display: none;
+	}
+}
+
+.wcpt-session-speakers {
+	display: block;
+	font-style: italic;
+}
+
+.wcb-favourite-session {
+	background-color: $color-blue-81;
+}
+
+
+@media screen and (max-width: 700px) {
+
+	.wcpt-schedule tr {
+		border-color: $color-border;
+	}
+
+	.wcpt-schedule td.wcb-session-category-workshop-spacer {
+		display: none;
+	}
+}
