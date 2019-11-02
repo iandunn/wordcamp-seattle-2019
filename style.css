@@ -1284,7 +1284,8 @@ td.wcb-session-category-workshop-spacer {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
   .emoji-radio-buttons-wrap .grunion-field-label {
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 20px; }
   .emoji-radio-buttons-wrap .grunion-radio-label {
     height: 164px;
     min-width: 144px;
