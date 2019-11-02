@@ -1,0 +1,64 @@
+.emoji-radio-buttons-wrap {
+	display: flex;
+	flex-wrap: wrap;
+
+	.grunion-field-label {
+		width: 100%;
+	}
+
+	.grunion-radio-label {
+		height: 164px;
+		min-width: 144px;
+		flex: 1 1 0;
+		font-weight: normal;
+		position: relative;
+	}
+}
+
+.emoji-radio-buttons {
+	padding: 1rem;
+
+	&::before {
+		padding: 2rem 1.5rem;
+		height: 164px;
+		width: 164px;
+		display: flex;
+		text-align: center;
+		border: 1px solid transparent;
+		position: absolute;
+		left: -10px;
+		top: -10px;
+		right: -10px;
+		bottom: -10px;
+
+	}
+
+	&:checked::before {
+		border-color: $color-blue-53;
+		border-radius: 10px;
+	}
+
+	&[value="100"]::before {
+		content: url(https://2019.seattle.wordcamp.org/files/2019/11/hundred-points-symbol.png);
+	}
+
+	&[value="Heart"]::before {
+		content: url(https://2019.seattle.wordcamp.org/files/2019/11/heavy-black-heart.png);
+	}
+
+	&[value="Clap"]::before {
+		content: url(https://2019.seattle.wordcamp.org/files/2019/11/clapping-hands.png);
+	}
+
+	&[value="Thumbs Up"]::before {
+		content: url(https://2019.seattle.wordcamp.org/files/2019/11/thumbs-up.png);
+	}
+
+	&[value="Laugh Tears"]::before {
+		content: url(https://2019.seattle.wordcamp.org/files/2019/11/face-with-tears-of-joy.png);
+	}
+
+	&[value="Happy"]::before {
+		content: url(https://2019.seattle.wordcamp.org/files/2019/11/smiling-face-with-smiling-eyes.png);
+	}
+}

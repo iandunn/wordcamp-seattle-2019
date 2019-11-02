@@ -1277,6 +1277,55 @@ td.wcb-session-category-workshop-spacer {
   .wcpt-schedule td.wcb-session-category-workshop-spacer {
     display: none; } }
 
+.emoji-radio-buttons-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .emoji-radio-buttons-wrap .grunion-field-label {
+    width: 100%; }
+  .emoji-radio-buttons-wrap .grunion-radio-label {
+    height: 164px;
+    min-width: 144px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+    font-weight: normal;
+    position: relative; }
+
+.emoji-radio-buttons {
+  padding: 1rem; }
+  .emoji-radio-buttons::before {
+    padding: 2rem 1.5rem;
+    height: 164px;
+    width: 164px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    border: 1px solid transparent;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    right: -10px;
+    bottom: -10px; }
+  .emoji-radio-buttons:checked::before {
+    border-color: #4bc3c3;
+    border-radius: 10px; }
+  .emoji-radio-buttons[value="100"]::before {
+    content: url(https://2019.seattle.wordcamp.org/files/2019/11/hundred-points-symbol.png); }
+  .emoji-radio-buttons[value="Heart"]::before {
+    content: url(https://2019.seattle.wordcamp.org/files/2019/11/heavy-black-heart.png); }
+  .emoji-radio-buttons[value="Clap"]::before {
+    content: url(https://2019.seattle.wordcamp.org/files/2019/11/clapping-hands.png); }
+  .emoji-radio-buttons[value="Thumbs Up"]::before {
+    content: url(https://2019.seattle.wordcamp.org/files/2019/11/thumbs-up.png); }
+  .emoji-radio-buttons[value="Laugh Tears"]::before {
+    content: url(https://2019.seattle.wordcamp.org/files/2019/11/face-with-tears-of-joy.png); }
+  .emoji-radio-buttons[value="Happy"]::before {
+    content: url(https://2019.seattle.wordcamp.org/files/2019/11/smiling-face-with-smiling-eyes.png); }
+
 /*
  * Footer
  */
