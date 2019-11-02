@@ -1277,6 +1277,9 @@ td.wcb-session-category-workshop-spacer {
   .wcpt-schedule td.wcb-session-category-workshop-spacer {
     display: none; } }
 
+.grunion-field-select-wrap select {
+  max-width: 100%; }
+
 .emoji-radio-buttons-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
